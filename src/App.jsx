@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { ParallaxProvider } from "react-scroll-parallax";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ScrollProgressBar from "./components/ScrollProgressBar";
+import ProgressIndicator from "./components/ProgressIndicator";
+import Home from "./sections/Home";
+import About from "./sections/About";
+import Projects from "./sections/Projects";
+import Articles from "./sections/Articles";
+import Contact from "./sections/Contact";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <ParallaxProvider>
+      <div
+        className="App min-h-screen text-luxury-white"
+        style={{
+          background: "linear-gradient(to bottom, #111, #222, #333)", // Gradiente general
+          backgroundAttachment: "fixed", // Fondo fijo para scroll
+        }}
+      >
+        <Navbar />
+        <ScrollProgressBar />
+        <ProgressIndicator />
+        <main>
+          <section id="home">
+            <Home />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="projects">
+            <Projects />
+          </section>
+          <section id="articles">
+            <Articles />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+        </main>
+        <Footer />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </ParallaxProvider>
+  );
 }
 
-export default App
+export default App;
