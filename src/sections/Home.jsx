@@ -1,103 +1,94 @@
 import { useEffect, useState } from "react";
 
 function Home() {
-  const [greeting, setGreeting] = useState("");
-  const [showGreeting, setShowGreeting] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const getGreeting = () => {
-      const currentHour = new Date().getHours();
-      if (currentHour < 12) {
-        setGreeting("Good Morning");
-      } else if (currentHour < 18) {
-        setGreeting("Good Afternoon");
-      } else {
-        setGreeting("Good Evening");
-      }
-      setShowGreeting(true);
-      setTimeout(() => {
-        setShowGreeting(false);
-      }, 4000); // Desaparece el saludo después de 4 segundos
+    const handleScroll = () => setScrollY(window.scrollY);
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    getGreeting();
-
-    const handleScroll = () => {
-      setShowGreeting(false); // Ocultar saludo al hacer scroll
-    };
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
   }, []);
 
-  return (
-    <div className="relative min-h-screen bg-[#1A1A1A] m-0 p-0 overflow-hidden">
-      {/* Saludo dinámico */}
-      {showGreeting && (
-        <div className="absolute top-4 right-4 bg-gray-800 text-white p-4 rounded-full shadow-xl animate-slideIn">
-          <p className="text-lg font-semibold inline">{greeting}</p>
-          <p className="text-sm inline ml-2">from the studio</p>
-        </div>
-      )}
+  const getScrollEffect = () => ({
+    transform: `translateY(${scrollY * 0.1}px)`,
+    transition: "transform 0.5s ease-out",
+  });
 
-      {/* Título con sombra elegante */}
-      <h1 className="text-6xl font-bold text-center relative text-gray-100 mt-40">
+  const getMouseEffect = () => ({
+    background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(0, 255, 153, 0.3), transparent 80%)`,
+    transition: "background 0.1s ease-out",
+  });
+
+  return (
+    <div className="relative min-h-screen bg-[#1A1A1A] text-white overflow-hidden">
+      {/* Luz dinámica que sigue el cursor */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={getMouseEffect()}
+      ></div>
+
+      {/* Fondo con Mapa Mundi Geométrico */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 1000 600"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {/* Continentes estilizados */}
+          <path
+            d="M50,150 L200,100 L350,200 L500,100 L650,200 L800,100"
+            stroke="#FFFFFF"
+            strokeWidth="1"
+            fill="none"
+          />
+          <path
+            d="M100,300 L300,250 L400,350 L600,250 L700,350 L900,250"
+            stroke="#00FF99"
+            strokeWidth="1"
+            fill="none"
+          />
+          {/* Puntos de conexión */}
+          <circle cx="200" cy="100" r="5" fill="#FFFFFF" className="animate-pulse" />
+          <circle cx="500" cy="100" r="5" fill="#00FF99" className="animate-pulse" />
+          <circle cx="700" cy="350" r="5" fill="#FFFFFF" className="animate-pulse" />
+          <circle cx="400" cy="350" r="5" fill="#00FF99" className="animate-pulse" />
+          <circle cx="900" cy="250" r="5" fill="#FFFFFF" className="animate-pulse" />
+        </svg>
+      </div>
+
+      {/* Capa Trasera con Luz Difusa */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute w-full h-full bg-gradient-to-br from-[#0E0E0E] via-[#1A1A1A] to-[#0E0E0E] opacity-70 animate-pulse"></div>
+      </div>
+
+      {/* Texto Principal */}
+      <div
+        className="absolute top-[40%] left-[10%] text-6xl md:text-8xl font-bold z-10"
+        style={getScrollEffect()}
+      >
         <span
-          className="relative inline-block text-white"
           style={{
-            animation: "textShadowEffect 3s ease-in-out 1",
+            background: "linear-gradient(to right, #FFFFFF, #004D32)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
           }}
         >
-          Welcome to my web
-          <span
-            className="absolute bottom-0 left-0 w-full h-[2px] bg-transparent animate-underline"
-            style={{
-              animation: "underlineEffect 2s ease-in-out forwards",
-            }}
-          ></span>
+          Transforming Insights into Innovation
         </span>
-      </h1>
+      </div>
 
-      <style>
-        {`
-          @keyframes slideIn {
-            0% {
-              opacity: 0;
-              transform: translateX(100%);
-            }
-            100% {
-              opacity: 1;
-              transform: translateX(0);
-            }
-          }
-
-          @keyframes textShadowEffect {
-            0% {
-              opacity: 0;
-              text-shadow: none;
-            }
-            50% {
-              opacity: 1;
-              text-shadow: 2px 0px 5px rgba(255, 255, 255, 0.3), 4px 0px 10px rgba(255, 255, 255, 0.5);
-            }
-            100% {
-              opacity: 1;
-              text-shadow: 2px 0px 5px rgba(255, 255, 255, 0.3), 4px 0px 10px rgba(255, 255, 255, 0.5);
-            }
-          }
-
-          @keyframes underlineEffect {
-            0% {
-              width: 0;
-              background-color: transparent;
-            }
-            100% {
-              width: 100%;
-              background-color: rgba(255, 255, 255, 1); 
-            }
-          }
-        `}
-      </style>
+      {/* Halo de Luz Difusa */}
+      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] rounded-full bg-[#00FF99] opacity-20 blur-[150px] z-0"></div>
     </div>
   );
 }
