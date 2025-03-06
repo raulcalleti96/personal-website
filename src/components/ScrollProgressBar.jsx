@@ -6,7 +6,8 @@ function ScrollProgressBar() {
   useEffect(() => {
     const updateProgress = () => {
       const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
       setProgress(scrollPercent);
     };
@@ -17,7 +18,7 @@ function ScrollProgressBar() {
 
   return (
     <div
-      className="fixed top-0 left-0 h-2 bg-green-700 z-50"
+      className="fixed top-0 left-0 h-2 bg-naranja-vibrante z-50"
       style={{ width: `${progress}%` }}
     ></div>
   );

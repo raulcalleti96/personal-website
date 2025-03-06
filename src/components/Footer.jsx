@@ -1,9 +1,7 @@
-function Footer() {
+export default function Footer() {
   return (
-    <footer className="bg-[#1A1A1A] text-gray-400 py-6 text-center">
-      <p>© 2024 Raul Santiago. All rights reserved.</p>
+    <footer className="bg-negro-mate text-gray-400 py-6 text-center border-t border-gris-oscuro">
+      <p className="text-blanco-suave">&copy; {new Date().getFullYear()} Raul Santiago Prieto. All rights reserved.</p>
     </footer>
   );
 }
-
-export default Footer;

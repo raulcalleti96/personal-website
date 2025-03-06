@@ -11,7 +11,10 @@ function ProgressIndicator() {
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        if (
+          rect.top <= window.innerHeight / 2 &&
+          rect.bottom >= window.innerHeight / 2
+        ) {
           currentSection = section.id;
         }
       });
@@ -33,11 +36,11 @@ function ProgressIndicator() {
           to={section}
           smooth={true}
           duration={500}
-          className={`w-4 h-4 rounded-full cursor-pointer ${
+          className={`w-4 h-4 rounded-full cursor-pointer transition-colors duration-300 ${
             activeSection === section
-              ? "bg-green-700 scale-110"
-              : "bg-gray-500"
-          } transition-all`}
+              ? "bg-naranja-vibrante"
+              : "bg-gris-medio"
+          }`}
         />
       ))}
     </div>
