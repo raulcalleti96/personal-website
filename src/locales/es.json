@@ -1,0 +1,19 @@
+{
+  "home": {
+    "title": "Raúl Santiago Prieto",
+    "subtitle": "Analista de Datos | Apasionado de la IA y los Negocios",
+    "greeting": {
+      "morning": "🌅 Un maravilloso buenos días",
+      "afternoon": "☀️ Una maravillosa tarde",
+      "evening": "🌙 Una maravillosa noche"
+    },
+    "holiday": {
+      "july4": "🇺🇸 ¡Feliz 4 de Julio! 🎆",
+      "oct12": "🌎 ¡Feliz Día de la Hispanidad! 🎉",
+      "christmas": "🎄 ¡Feliz Navidad! 🎄",
+      "newyear": "🎉 ¡Feliz Año Nuevo! 🎉",
+      "thanksgiving": "🦃 ¡Feliz Acción de Gracias! 🦃",
+      "holyweek": "✨ ¡Feliz Semana Santa! ✨"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "home": {
+    "title": "Raúl Santiago Prieto",
+    "subtitle": "Data Analyst | AI & Business Enthusiast",
+    "greeting": {
+      "morning": "🌅 A wonderful good morning",
+      "afternoon": "☀️ A wonderful good afternoon",
+      "evening": "🌙 A wonderful good evening"
+    },
+    "holiday": {
+      "july4": "🇺🇸 Happy 4th of July! 🎆",
+      "oct12": "🌎 Happy Hispanic Day! 🎉",
+      "christmas": "🎄 Merry Christmas! 🎄",
+      "newyear": "🎉 Happy New Year! 🎉",
+      "thanksgiving": "🦃 Happy Thanksgiving! 🦃",
+      "holyweek": "✨ Holy Week! ✨"
+    }
+  }
+}

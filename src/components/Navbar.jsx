@@ -1,138 +1,88 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FiChevronDown } from "react-icons/fi";
+import { motion } from "framer-motion";
+import { FiChevronDown, FiGlobe } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
+  const { i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [specialMessage, setSpecialMessage] = useState("");
-  const [greeting, setGreeting] = useState("");
-  const [currentMessage, setCurrentMessage] = useState("");
-  const [showMessage, setShowMessage] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
+  const [showLanguageButton, setShowLanguageButton] = useState(false);
 
-  const menuItems = ["Home", "About", "Projects", "Articles", "Contact"];
-  const currentPage = "Home";
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === "en" ? "es" : "en");
+  };
 
   useEffect(() => {
-    const getMessages = () => {
-      const now = new Date();
-      const currentHour = now.getHours();
-      const currentMonth = now.getMonth();
-      const currentDate = now.getDate();
+    const handleScroll = () => {
+      const aboutSection = document.getElementById("about");
 
-      let special = "";
-      if (currentMonth === 11 && currentDate >= 20) {
-        special = "Merry Christmas! 🎄";
-      } else if (currentMonth === 0 && currentDate <= 7) {
-        special = "Happy New Year! 🎉";
-      } else if (currentMonth === 10 && currentDate >= 20 && currentDate <= 30) {
-        special = "Happy Thanksgiving! 🦃";
-      } else if (currentMonth === 3 && currentDate >= 1 && currentDate <= 10) {
-        special = "Holly Week! ✨";
-      }
-
-      setSpecialMessage(special);
-
-      let generalGreeting = "";
-      if (currentHour < 12) {
-        generalGreeting = "A wonderful good morning";
-      } else if (currentHour < 18) {
-        generalGreeting = "A wonderful good afternoon";
-      } else {
-        generalGreeting = "A wonderful good evening";
-      }
-      setGreeting(generalGreeting);
-
-      if (special) {
-        setCurrentMessage(special);
-        setShowMessage(true);
-        setTimeout(() => {
-          setShowMessage(false);
-          setTimeout(() => {
-            setCurrentMessage(generalGreeting);
-            setShowMessage(true);
-            setTimeout(() => {
-              setShowMessage(false);
-            }, 4000);
-          }, 1000);
-        }, 4000);
-      } else {
-        setCurrentMessage(generalGreeting);
-        setShowMessage(true);
-        setTimeout(() => {
-          setShowMessage(false);
-        }, 4000);
+      if (aboutSection) {
+        const aboutPosition = aboutSection.offsetTop - 100;
+        setShowNavbar(window.scrollY > aboutPosition);
+        setShowLanguageButton(window.scrollY > aboutPosition);
       }
     };
 
-    getMessages();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 flex items-start p-6 bg-negro-mate">
+    <motion.header
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: showNavbar ? 1 : 0, y: showNavbar ? 0 : -50 }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 w-full z-50 flex items-start p-6 bg-[#1A1A1A] shadow-lg"
+    >
       {/* Globo del nombre */}
-      <div className="bg-gris-oscuro/80 text-white rounded-full px-10 py-4 shadow-lg flex items-center justify-center w-[150px] h-[60px] hover:bg-gris-medio/80 transition duration-300 backdrop-blur-md">
-        <span className="text-xl font-semibold tracking-wide text-center">
-          Raul
-        </span>
+      <div className="bg-neutral-700/80 text-white rounded-full px-10 py-4 shadow-lg flex items-center justify-center w-[150px] h-[60px]">
+        <span className="text-xl font-semibold tracking-wide">Raul</span>
       </div>
 
-      {/* Globo del estado */}
+      {/* Menú desplegable */}
       <div className="relative ml-6">
         <button
-          className="bg-gris-oscuro/80 text-white rounded-full px-10 py-4 shadow-lg flex items-center justify-between w-[150px] h-[60px] hover:bg-gris-medio/80 transition duration-300 backdrop-blur-md"
+          className="bg-neutral-700/80 text-white rounded-full px-10 py-4 shadow-lg flex items-center justify-between w-[150px] h-[60px]"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <span className="text-xl font-medium">{currentPage}</span>
-          <motion.div
-            initial={{ rotate: 0 }}
-            animate={{ rotate: isMenuOpen ? 180 : 0 }}
-            className="text-xl"
-          >
+          <span className="text-xl font-medium">Menu</span>
+          <motion.div animate={{ rotate: isMenuOpen ? 180 : 0 }} className="text-xl">
             <FiChevronDown />
           </motion.div>
         </button>
 
-        {/* Menú desplegable */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="absolute top-full mt-4 right-0 bg-negro-mate/95 text-white rounded-lg shadow-2xl p-8 w-80 backdrop-blur-xl"
-            >
-              <ul className="space-y-6">
-                {menuItems.map((item) => (
-                  <li key={item}>
-                    <a
-                      href={`/${item.toLowerCase()}`}
-                      className="block text-xl font-medium hover:underline"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-
-      {/* Mensajes dinámicos */}
-      <AnimatePresence>
-        {showMessage && (
+        {isMenuOpen && (
           <motion.div
-            initial={{ x: 300, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -300, opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="absolute top-6 right-6 bg-gris-oscuro/80 text-white rounded-full px-10 py-4 shadow-lg flex items-center backdrop-blur-md"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute top-full mt-4 right-0 bg-neutral-900/95 text-white rounded-lg shadow-2xl p-8 w-80"
           >
-            <span className="text-xl font-medium">{currentMessage}</span>
+            <ul className="space-y-6">
+              <li><a href="#home" className="block text-xl font-medium hover:underline">Home</a></li>
+              <li><a href="#about" className="block text-xl font-medium hover:underline">About</a></li>
+              <li><a href="#projects" className="block text-xl font-medium hover:underline">Projects</a></li>
+              <li><a href="#contact" className="block text-xl font-medium hover:underline">Contact</a></li>
+            </ul>
           </motion.div>
         )}
-      </AnimatePresence>
-    </header>
+      </div>
+
+      {/* Botón de cambio de idioma (solo visible cuando se llega a About) */}
+      {showLanguageButton && (
+        <motion.button
+          onClick={toggleLanguage}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="ml-auto bg-neutral-700/80 text-white rounded-full px-6 py-3 shadow-lg flex items-center hover:bg-neutral-600/80 transition duration-300"
+        >
+          <FiGlobe className="mr-2" />
+          {i18n.language === "en" ? "EN" : "ES"}
+        </motion.button>
+      )}
+    </motion.header>
   );
 }
 
