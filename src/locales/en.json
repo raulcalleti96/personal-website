@@ -1,19 +1,25 @@
 {
   "home": {
-    "title": "Raúl Santiago Prieto",
+    "title": "Raul Santiago",
     "subtitle": "Data Analyst | AI & Business Enthusiast",
+    "buttons": {
+      "cv": "Download CV",
+      "blog": "Blog",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
     "greeting": {
-      "morning": "🌅 A wonderful good morning",
-      "afternoon": "☀️ A wonderful good afternoon",
-      "evening": "🌙 A wonderful good evening"
+      "morning": "A wonderful good morning",
+      "afternoon": "A wonderful good afternoon",
+      "evening": "A wonderful good evening"
     },
     "holiday": {
-      "july4": "🇺🇸 Happy 4th of July! 🎆",
-      "oct12": "🌎 Happy Hispanic Day! 🎉",
-      "christmas": "🎄 Merry Christmas! 🎄",
-      "newyear": "🎉 Happy New Year! 🎉",
-      "thanksgiving": "🦃 Happy Thanksgiving! 🦃",
-      "holyweek": "✨ Holy Week! ✨"
+      "july4": "Happy 4th of July 🇺🇸",
+      "oct12": "Happy October 12 🌎",
+      "christmas": "Merry Christmas! 🎄",
+      "newyear": "Happy New Year! 🎉",
+      "thanksgiving": "Happy Thanksgiving! 🦃",
+      "holyweek": "Holy Week! ✨"
     }
   }
 }

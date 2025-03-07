@@ -1,19 +1,25 @@
 {
   "home": {
-    "title": "Raúl Santiago Prieto",
-    "subtitle": "Analista de Datos | Apasionado de la IA y los Negocios",
+    "title": "Raul Santiago",
+    "subtitle": "Analista de Datos | Entusiasta de IA y Negocios",
+    "buttons": {
+      "cv": "Descargar CV",
+      "blog": "Blog",
+      "projects": "Proyectos",
+      "contact": "Contáctame"
+    },
     "greeting": {
-      "morning": "🌅 Un maravilloso buenos días",
-      "afternoon": "☀️ Una maravillosa tarde",
-      "evening": "🌙 Una maravillosa noche"
+      "morning": "Un maravilloso buenos días",
+      "afternoon": "Un maravilloso buenas tardes",
+      "evening": "Un maravilloso buenas noches"
     },
     "holiday": {
-      "july4": "🇺🇸 ¡Feliz 4 de Julio! 🎆",
-      "oct12": "🌎 ¡Feliz Día de la Hispanidad! 🎉",
-      "christmas": "🎄 ¡Feliz Navidad! 🎄",
-      "newyear": "🎉 ¡Feliz Año Nuevo! 🎉",
-      "thanksgiving": "🦃 ¡Feliz Acción de Gracias! 🦃",
-      "holyweek": "✨ ¡Feliz Semana Santa! ✨"
+      "july4": "¡Feliz 4 de Julio 🇺🇸!",
+      "oct12": "¡Feliz 12 de Octubre 🌎!",
+      "christmas": "¡Feliz Navidad! 🎄",
+      "newyear": "¡Feliz Año Nuevo! 🎉",
+      "thanksgiving": "¡Feliz Acción de Gracias! 🦃",
+      "holyweek": "¡Semana Santa! ✨"
     }
   }
 }

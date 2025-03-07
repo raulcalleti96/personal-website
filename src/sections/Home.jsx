@@ -9,8 +9,6 @@ import bgImage from "../assets/nycfondo.jpg";
 const Home = () => {
   const orbitRef = useRef();
   const { t, i18n } = useTranslation();
-  const [specialMessage, setSpecialMessage] = useState("");
-  const [greeting, setGreeting] = useState("");
   const [currentMessage, setCurrentMessage] = useState("");
   const [showMessage, setShowMessage] = useState(false);
   const [showLanguageButton, setShowLanguageButton] = useState(true);
@@ -53,7 +51,6 @@ const Home = () => {
       } else if (currentMonth === 3 && currentDate >= 1 && currentDate <= 10) {
         special = t("home.holiday.holyweek");
       }
-      setSpecialMessage(special);
 
       let generalGreeting = "";
       if (currentHour < 12) {
@@ -63,7 +60,6 @@ const Home = () => {
       } else {
         generalGreeting = t("home.greeting.evening");
       }
-      setGreeting(generalGreeting);
 
       if (special) {
         setCurrentMessage(special);
@@ -105,7 +101,6 @@ const Home = () => {
         <OrbitControls ref={orbitRef} enableZoom={false} enableRotate={false} enablePan={false} />
       </Canvas>
 
-      {/* Botón de cambio de idioma en Home */}
       {showLanguageButton && (
         <motion.button
           onClick={toggleLanguage}
@@ -116,13 +111,23 @@ const Home = () => {
         </motion.button>
       )}
 
-      {/* Globo con el saludo dinámico */}
+      <div className="absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center">
+        <motion.h1 className="text-5xl md:text-7xl font-bold text-naranja-vibrante drop-shadow-lg">{t("home.title")}</motion.h1>
+        <motion.p className="text-lg md:text-2xl text-blanco-suave mt-4">{t("home.subtitle")}</motion.p>
+
+        <div className="mt-6 flex flex-col md:flex-row gap-4 justify-center items-center">
+          <motion.a href="#cv" className="px-6 py-3 bg-naranja-vibrante text-black font-semibold rounded-lg shadow-lg">{t("home.buttons.cv")}</motion.a>
+          <motion.a href="#blog" className="px-6 py-3 bg-gris-medio text-blanco-suave font-semibold rounded-lg shadow-lg">{t("home.buttons.blog")}</motion.a>
+          <motion.a href="#projects" className="px-6 py-3 bg-gris-medio text-blanco-suave font-semibold rounded-lg shadow-lg">{t("home.buttons.projects")}</motion.a>
+          <motion.a href="#contact" className="px-6 py-3 bg-gris-medio text-blanco-suave font-semibold rounded-lg shadow-lg">{t("home.buttons.contact")}</motion.a>
+        </div>
+      </div>
       <AnimatePresence>
         {showMessage && (
           <motion.div
-            initial={{ x: 200, opacity: 0 }}
+            initial={{ x: 300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: 200, opacity: 0 }}
+            exit={{ x: 300, opacity: 0 }}
             transition={{ duration: 0.5 }}
             className="absolute top-6 right-6 bg-neutral-700/80 text-white rounded-full px-10 py-4 shadow-lg flex items-center backdrop-blur-md"
           >
@@ -130,26 +135,6 @@ const Home = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Contenido principal */}
-      <div className="absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-5xl md:text-7xl font-bold text-naranja-vibrante drop-shadow-lg"
-        >
-          {t("home.title")}
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
-          className="text-lg md:text-2xl text-blanco-suave mt-4"
-        >
-          {t("home.subtitle")}
-        </motion.p>
-      </div>
     </div>
   );
 };
