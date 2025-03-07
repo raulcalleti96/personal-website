@@ -9,9 +9,9 @@
       "contact": "Contact"
     },
     "greeting": {
-      "morning": "A wonderful good morning",
-      "afternoon": "A wonderful good afternoon",
-      "evening": "A wonderful good evening"
+      "morning": " A wonderful good morning 🌇",
+      "afternoon": "A wonderful good afternoon ☀️",
+      "evening": "A wonderful good evening 🌙"
     },
     "holiday": {
       "july4": "Happy 4th of July 🇺🇸",
