@@ -9,7 +9,7 @@
       "contact": "Contact"
     },
     "greeting": {
-      "morning": " A wonderful good morning 🌇",
+      "morning": "A wonderful good morning 🌇",
       "afternoon": "A wonderful good afternoon ☀️",
       "evening": "A wonderful good evening 🌙"
     },
@@ -21,5 +21,32 @@
       "thanksgiving": "Happy Thanksgiving! 🦃",
       "holyweek": "Holy Week! ✨"
     }
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am passionate about Data Science and Artificial Intelligence. I love exploring new technologies and sharing knowledge.",
+    "experience": "Experience",
+    "experience_detail": "I have worked in data analysis and visualization projects.",
+    "experience_1": "Data Analyst at Elastic",
+    "experience_2": "Software Analyst at Banco Santander",
+    "experience_3": "OCR and Automation Specialist",
+    "studies": "Studies & Certifications",
+    "studies_detail": "My academic background includes certifications in business analysis and AI.",
+    "studies_1": "Higher Degree in Multiplatform Application Development",
+    "studies_2": "Elastic Engineering Certification",
+    "hobbies": "Hobbies",
+    "hobbies_detail": "I enjoy sports, aviation, and music.",
+    "hobby_1": "Tennis player with ITF ranking",
+    "hobby_2": "Passionate about aviation and music",
+    "strengths": "Strengths & Weaknesses",
+    "strengths_detail": "I am analytical, proactive, and always looking for innovative solutions.",
+    "strength_1": "Strong problem-solving skills",
+    "weakness_1": "Sometimes too detail-oriented",
+    "languages": "Languages",
+    "languages_detail": "I speak multiple languages fluently.",
+    "language_spanish": "Native Spanish",
+    "language_english": "Advanced English (C1)",
+    "language_german": "Basic German (A2)",
+    "language_french": "Basic French (A2)"
   }
 }

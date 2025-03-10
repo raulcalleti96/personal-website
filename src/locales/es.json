@@ -1,25 +1,52 @@
 {
   "home": {
-    "title": "Raul Santiago",
+    "title": "Raúl Santiago",
     "subtitle": "Analista de Datos | Entusiasta de IA y Negocios",
     "buttons": {
       "cv": "Descargar CV",
       "blog": "Blog",
       "projects": "Proyectos",
-      "contact": "Contáctame"
+      "contact": "Contacto"
     },
     "greeting": {
-      "morning": "Un maravilloso buenos días",
-      "afternoon": "Un maravilloso buenas tardes",
-      "evening": "Un maravilloso buenas noches"
+      "morning": "Un maravilloso buenos días 🌇",
+      "afternoon": "Una maravillosa buena tarde ☀️",
+      "evening": "Una maravillosa buena noche 🌙"
     },
     "holiday": {
-      "july4": "¡Feliz 4 de Julio 🇺🇸!",
-      "oct12": "¡Feliz 12 de Octubre 🌎!",
+      "july4": "Feliz 4 de Julio 🇺🇸",
+      "oct12": "Feliz 12 de Octubre 🌎",
       "christmas": "¡Feliz Navidad! 🎄",
       "newyear": "¡Feliz Año Nuevo! 🎉",
       "thanksgiving": "¡Feliz Acción de Gracias! 🦃",
       "holyweek": "¡Semana Santa! ✨"
     }
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description": "Soy un apasionado por la Ciencia de Datos y la Inteligencia Artificial. Me encanta explorar nuevas tecnologías y compartir conocimientos.",
+    "experience": "Experiencia",
+    "experience_detail": "He trabajado en proyectos de análisis de datos y visualización.",
+    "experience_1": "Analista de Datos en Elastic",
+    "experience_2": "Analista de Software en Banco Santander",
+    "experience_3": "Especialista en OCR y Automatización",
+    "studies": "Estudios y Certificaciones",
+    "studies_detail": "Mi formación académica incluye certificaciones en análisis de negocio e inteligencia artificial.",
+    "studies_1": "Grado Superior en Desarrollo de Aplicaciones Multiplataforma",
+    "studies_2": "Certificación de Ingeniería en Elastic",
+    "hobbies": "Hobbies",
+    "hobbies_detail": "Disfruto del deporte, la aviación y la música.",
+    "hobby_1": "Jugador de tenis con ranking ITF",
+    "hobby_2": "Apasionado por la aviación y la música",
+    "strengths": "Puntos Fuertes y Debilidades",
+    "strengths_detail": "Soy analítico, proactivo y siempre busco soluciones innovadoras.",
+    "strength_1": "Habilidad para resolver problemas",
+    "weakness_1": "A veces demasiado detallista",
+    "languages": "Idiomas",
+    "languages_detail": "Hablo varios idiomas con fluidez.",
+    "language_spanish": "Español nativo",
+    "language_english": "Inglés avanzado (C1)",
+    "language_german": "Alemán básico (A2)",
+    "language_french": "Francés básico (A2)"
   }
 }

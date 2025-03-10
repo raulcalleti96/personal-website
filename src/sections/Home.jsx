@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FiGlobe } from "react-icons/fi";
-import bgImage from "../assets/nycfondo.jpg";
+import bgImage from "../assets/maeva-vigier-nyc.jpg";
 
 const Home = () => {
   const orbitRef = useRef();
@@ -111,30 +111,30 @@ const Home = () => {
         </motion.button>
       )}
 
-      <div className="absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center">
-        <motion.h1 className="text-5xl md:text-7xl font-bold text-naranja-vibrante drop-shadow-lg">{t("home.title")}</motion.h1>
-        <motion.p className="text-lg md:text-2xl text-blanco-suave mt-4">{t("home.subtitle")}</motion.p>
+      <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center">
+        <motion.h1
+            className="text-5xl md:text-7xl font-bold"
+            style={{ color: "#1B3B6F", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)" }}>
+          {t("home.title")}
+        </motion.h1>
+        <motion.p className="text-lg md:text-2xl text-black mt-4">{t("home.subtitle")}</motion.p>
 
         <div className="mt-6 flex flex-col md:flex-row gap-4 justify-center items-center">
-          <motion.a href="#cv" className="px-6 py-3 bg-naranja-vibrante text-black font-semibold rounded-lg shadow-lg">{t("home.buttons.cv")}</motion.a>
-          <motion.a href="#blog" className="px-6 py-3 bg-gris-medio text-blanco-suave font-semibold rounded-lg shadow-lg">{t("home.buttons.blog")}</motion.a>
-          <motion.a href="#projects" className="px-6 py-3 bg-gris-medio text-blanco-suave font-semibold rounded-lg shadow-lg">{t("home.buttons.projects")}</motion.a>
-          <motion.a href="#contact" className="px-6 py-3 bg-gris-medio text-blanco-suave font-semibold rounded-lg shadow-lg">{t("home.buttons.contact")}</motion.a>
+          <motion.a
+              href="#cv"
+              className="px-6 py-3 font-semibold rounded-lg shadow-lg"
+              style={{backgroundColor: "#E68A00", color: "black"}}
+          >
+            {t("home.buttons.cv")}
+          </motion.a>
+          <motion.a href="#blog"
+                    className="px-6 py-3 bg-gris-medio text-blanco-suave font-semibold rounded-lg shadow-lg">{t("home.buttons.blog")}</motion.a>
+          <motion.a href="#projects"
+                    className="px-6 py-3 bg-gris-medio text-blanco-suave font-semibold rounded-lg shadow-lg">{t("home.buttons.projects")}</motion.a>
+          <motion.a href="#contact"
+                    className="px-6 py-3 bg-gris-medio text-blanco-suave font-semibold rounded-lg shadow-lg">{t("home.buttons.contact")}</motion.a>
         </div>
       </div>
-      <AnimatePresence>
-        {showMessage && (
-          <motion.div
-            initial={{ x: 300, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: 300, opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="absolute top-6 right-6 bg-neutral-700/80 text-white rounded-full px-10 py-4 shadow-lg flex items-center backdrop-blur-md"
-          >
-            <span className="text-xl font-medium">{currentMessage}</span>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 };
