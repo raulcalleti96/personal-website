@@ -5,7 +5,7 @@
   },
   "hosting": {
     "site": "personal-website-89a20",
-    "public": "public",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",

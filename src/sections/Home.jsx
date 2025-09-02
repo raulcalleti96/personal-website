@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FiGlobe } from "react-icons/fi";
-import bgImage from "../assets/maeva-vigier-nyc.jpg";
+// ... tus imports se mantienen igual
 
 const Home = () => {
   const orbitRef = useRef();
@@ -38,6 +38,7 @@ const Home = () => {
       const currentDate = now.getDate();
 
       let special = "";
+
       if (currentMonth === 6 && currentDate === 4) {
         special = t("home.holiday.july4");
       } else if (currentMonth === 9 && currentDate === 12) {
@@ -48,8 +49,10 @@ const Home = () => {
         special = t("home.holiday.newyear");
       } else if (currentMonth === 10 && currentDate >= 20 && currentDate <= 30) {
         special = t("home.holiday.thanksgiving");
-      } else if (currentMonth === 3 && currentDate >= 1 && currentDate <= 10) {
+      } else if (currentMonth === 3 && [13, 14, 15, 16, 17, 18, 19, 20].includes(currentDate)) {
         special = t("home.holiday.holyweek");
+      } else if (currentMonth === 3 && currentDate === 21) {
+        special = t("home.holiday.easter");
       }
 
       let generalGreeting = "";
@@ -86,16 +89,19 @@ const Home = () => {
     getMessages();
   }, [t]);
 
+  const buttonClass =
+    "px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold rounded-lg shadow-lg transition";
+
   return (
     <div
-      className="relative w-full h-screen overflow-hidden font-[Poppins]"
+      className="relative w-full h-screen overflow-y-auto font-[Poppins]"
       style={{
-        backgroundImage: `url(${bgImage})`,
+        backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/personal-website-89a20.firebasestorage.app/o/images%2Fmaeva-vigier-nyc.jpg?alt=media&token=3297e4fc-b0f5-48e7-9b06-1cd37e4627a9")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <Canvas className="absolute inset-0 z-0 pointer-events-none">
+      <Canvas className="absolute inset-0 z-0" style={{ pointerEvents: "none" }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[3, 3, 3]} intensity={1} />
         <OrbitControls ref={orbitRef} enableZoom={false} enableRotate={false} enablePan={false} />
@@ -111,28 +117,43 @@ const Home = () => {
         </motion.button>
       )}
 
-      <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center">
+      {showMessage && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          className="absolute top-5 right-6 bg-neutral-700/80 text-white px-6 py-3 rounded-full shadow-lg z-20 text-sm sm:text-base"
+        >
+          {currentMessage}
+        </motion.div>
+      )}
+
+      <div className="absolute top-[24%] sm:top-[25%] md:top-[28%] lg:top-[25%] xl:top-[25%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center">
         <motion.h1
-            className="text-5xl md:text-7xl font-bold"
-            style={{ color: "#1B3B6F", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)" }}>
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"
+          style={{ color: "#1B3B6F", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)" }}
+        >
           {t("home.title")}
         </motion.h1>
-        <motion.p className="text-lg md:text-2xl text-black mt-4">{t("home.subtitle")}</motion.p>
+        <motion.p className="text-base sm:text-lg md:text-xl text-black mt-4">
+          {t("home.subtitle")}
+        </motion.p>
 
-        <div className="mt-6 flex flex-col md:flex-row gap-4 justify-center items-center">
-          <motion.a
-              href="#cv"
-              className="px-6 py-3 font-semibold rounded-lg shadow-lg"
-              style={{backgroundColor: "#E68A00", color: "black"}}
-          >
-            {t("home.buttons.cv")}
-          </motion.a>
-          <motion.a href="#blog"
-                    className="px-6 py-3 bg-gris-medio text-blanco-suave font-semibold rounded-lg shadow-lg">{t("home.buttons.blog")}</motion.a>
-          <motion.a href="#projects"
-                    className="px-6 py-3 bg-gris-medio text-blanco-suave font-semibold rounded-lg shadow-lg">{t("home.buttons.projects")}</motion.a>
-          <motion.a href="#contact"
-                    className="px-6 py-3 bg-gris-medio text-blanco-suave font-semibold rounded-lg shadow-lg">{t("home.buttons.contact")}</motion.a>
+        <div className="mt-6 overflow-x-auto w-full max-w-[90vw] mx-auto">
+          <div className="flex gap-3 sm:justify-center w-max px-2">
+            <motion.a href="#cv" className={`${buttonClass} bg-[#E68A00] text-black`}>
+              {t("home.buttons.cv")}
+            </motion.a>
+            <motion.a href="#blog" className={`${buttonClass} bg-gris-medio text-blanco-suave`}>
+              {t("home.buttons.blog")}
+            </motion.a>
+            <motion.a href="#projects" className={`${buttonClass} bg-gris-medio text-blanco-suave`}>
+              {t("home.buttons.projects")}
+            </motion.a>
+            <motion.a href="#contact" className={`${buttonClass} bg-gris-medio text-blanco-suave`}>
+              {t("home.buttons.contact")}
+            </motion.a>
+          </div>
         </div>
       </div>
     </div>

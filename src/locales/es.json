@@ -9,44 +9,231 @@
       "contact": "Contacto"
     },
     "greeting": {
-      "morning": "Un maravilloso buenos días 🌇",
-      "afternoon": "Una maravillosa buena tarde ☀️",
-      "evening": "Una maravillosa buena noche 🌙"
+      "morning": "Buenos días 🌇",
+      "afternoon": "Buenas tardes ☀️",
+      "evening": "Buenas noches 🌙"
     },
     "holiday": {
       "july4": "Feliz 4 de Julio 🇺🇸",
-      "oct12": "Feliz 12 de Octubre 🌎",
+      "oct12": "Feliz 12 de Octubre 🇪🇸",
       "christmas": "¡Feliz Navidad! 🎄",
       "newyear": "¡Feliz Año Nuevo! 🎉",
       "thanksgiving": "¡Feliz Acción de Gracias! 🦃",
-      "holyweek": "¡Semana Santa! ✨"
+      "holyweek": "¡Buena Semana Santa! ✝️",
+      "easter": "¡Feliz Pascua! 🐣"
     }
   },
   "about": {
-    "title": "Sobre Mí",
-    "description": "Soy un apasionado por la Ciencia de Datos y la Inteligencia Artificial. Me encanta explorar nuevas tecnologías y compartir conocimientos.",
-    "experience": "Experiencia",
-    "experience_detail": "He trabajado en proyectos de análisis de datos y visualización.",
-    "experience_1": "Analista de Datos en Elastic",
-    "experience_2": "Analista de Software en Banco Santander",
-    "experience_3": "Especialista en OCR y Automatización",
-    "studies": "Estudios y Certificaciones",
-    "studies_detail": "Mi formación académica incluye certificaciones en análisis de negocio e inteligencia artificial.",
-    "studies_1": "Grado Superior en Desarrollo de Aplicaciones Multiplataforma",
-    "studies_2": "Certificación de Ingeniería en Elastic",
-    "hobbies": "Hobbies",
-    "hobbies_detail": "Disfruto del deporte, la aviación y la música.",
-    "hobby_1": "Jugador de tenis con ranking ITF",
-    "hobby_2": "Apasionado por la aviación y la música",
-    "strengths": "Puntos Fuertes y Debilidades",
-    "strengths_detail": "Soy analítico, proactivo y siempre busco soluciones innovadoras.",
-    "strength_1": "Habilidad para resolver problemas",
-    "weakness_1": "A veces demasiado detallista",
-    "languages": "Idiomas",
-    "languages_detail": "Hablo varios idiomas con fluidez.",
-    "language_spanish": "Español nativo",
-    "language_english": "Inglés avanzado (C1)",
-    "language_german": "Alemán básico (A2)",
-    "language_french": "Francés básico (A2)"
+    "title": "Sobre mí",
+    "description": "🚀 Raúl Santiago Prieto 🚀✨ Soy un Analista de Datos en Elastic y anteriormente en Banco Santander, con experiencia en ingeniería de software y automatización. También fui árbitro de fútbol en la RFEF. Apasionado por la exploración, la tecnología y la innovación, transformo datos en decisiones. ¡Conectemos y creemos el futuro juntos!",
+    "nav": {
+    "experience": "💼 Experiencia",
+    "education": "📚 Educación",
+    "technologies": "🧑🏻‍💻 Tecnologías",
+    "certifications": "🎓 Certificaciones",
+    "hobbies": "🎻 Hobbies",
+    "strengths_weaknesses": "⚖️ Fortalezas & Debilidades",
+    "cv": "📄 CV"
+    },
+    "cv": {
+    "title": "Mi CV",
+    "description": "Aquí puedes descargar la última versión de mi currículum en formato PDF.",
+    "download": "Descargar CV"
+  },
+    "experience": [
+      {
+        "company": "Elastic",
+        "position": "Data Analyst",
+        "years": "2024 - Actualidad",
+        "location": "Zamora - USA (Remoto mundial)",
+        "description": "En el equipo de Observability, trabajo con modelos de DBT y creación de reportes. Uso herramientas como DBT, ETL, SQL, Python, Elasticsearch, Pipelines (Buolkite), Looker Studio y BigQuery.",
+        "skills": ["DBT", "ETL", "SQL", "Python", "Elasticsearch", "BigQuery", "Looker Studio"]
+      },
+      {
+        "company": "Banco Santander Digital Services",
+        "position": "Software Engineering Analyst",
+        "years": "2022 - 2024",
+        "location": "Madrid y Zamora (Híbrido)",
+        "description": "Analista de software (Java, Python, SQL, COBOL-JCL), responsable de OCR, análisis de incidentes y BI Analyst (SQL, NoSQL, Java, Python, PowerBI).",
+        "skills": ["SQL", "NoSQL", "Java", "Python", "PowerBI", "OCR", "BI"]
+      },
+      {
+        "company": "NTT DATA",
+        "position": "RPA-OCR Software Developer",
+        "years": "2021 - 2022",
+        "location": "Zamora y Bilbao (Remoto)",
+        "description": "Desarrollador de automatizaciones en el equipo de OCR para escaneo automatizado de documentos (ABBY, Eclipse) y RPA (Blue Prism, UiPath).",
+        "skills": ["SQL", "Java", "Python", "Atlassian"]
+      },
+      {
+        "company": "Real Federación Española de Fútbol",
+        "position": "Árbitro de fútbol",
+        "years": "2016 - 2023",
+        "location": "Zamora y Bilbao (Presencial)",
+        "description": "Árbitro talento del Centro Tecnológico Arbitral (2017-2019). Actué en Preferente, 2ªB, 3ª división, 2ª Nacional Femenina y Liga Nacional Juvenil.",
+        "skills": ["Resolución de problemas", "Comunicación", "Decisiones bajo presión", "Gestión del estrés", "Lógica", "Razonamiento", "Liderazgo"]
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor's degree, Data Science",
+        "institution": "IU International University of Applied Sciences",
+        "years": "05/2024"
+      },
+      {
+        "title": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma, IT",
+        "institution": "IES Claudio Moyano",
+        "years": "01/2018 - 01/2021"
+      },
+      {
+        "title": "Ciclo Formativo de Grado Medio, Violín",
+        "institution": "Conservatorio Profesional de Zamora",
+        "years": "06/2022"
+      },
+      {
+        "title": "Técnico Medio en Sistemas Microinformáticos y Redes, IT",
+        "institution": "IES Claudio Moyano",
+        "years": "01/2016 - 01/2018"
+      },
+      {
+        "title": "Curso, Estudios Alemanes",
+        "institution": "Inlingua",
+        "years": "04/2016 - 06/2016"
+      },
+      {
+        "title": "Ciclo Formativo de Grado Medio, Música",
+        "institution": "Bedmar Music Conservatory",
+        "years": "01/2020"
+      }
+    ],
+    "certifications": [
+      { "title": "Fundamentos de la gestión de proyectos", "issuer": "LinkedIn" },
+      { "title": "Aprende Big Data: Análisis de datos", "issuer": "LinkedIn" },
+      { "title": "Fundamentos de Big Data", "issuer": "LinkedIn" },
+      { "title": "Gestión del cambio", "issuer": "LinkedIn" },
+      { "title": "Software Testing: Tools", "issuer": "LinkedIn" },
+      { "title": "Test Automation Foundations", "issuer": "LinkedIn" },
+      { "title": "Curso de Python 3", "issuer": "OpenWebinars" },
+      { "title": "Carnet de conducir B", "issuer": "DGT" }
+    ],
+    "hobbies": {
+      "tennis": {
+        "title": "🎾 Tenis",
+        "description": "Compito en el ITF World Tour. Consulta mi perfil abajo."
+      },
+      "violin": {
+        "title": "🎻 Violín",
+        "education": "Conservatorio Miguel Manzano (Zamora)",
+        "wherePlayed": "Orquesta del Conservatorio (Concertino) (2021 - Actualidad)"
+      },
+      "percussion": {
+        "title": "🥁 Percusión",
+        "wherePlayed": [
+          "Joven Orquesta Sinfónica de Valladolid (2022)",
+          "Banda de la Cofradía de Nuestra Madre de Zamora (2022 - Actualidad)"
+        ]
+      },
+      "piano": {
+        "title": "🎹 Piano",
+        "education": "Conservatorio Miguel Manzano (2024 - Actualidad)"
+      },
+      "reading": {
+        "title": "📚 Lectura",
+        "myPassionTitle": "📖 Mi Pasión por los Libros",
+        "description": "Me encanta leer libros que desafían mi forma de pensar y me ayudan a crecer. Desde tecnología y ciencia de datos hasta historia y filosofía, disfruto descubriendo nuevas perspectivas e ideas.",
+        "goodreadsTitle": "🌍 Mi Goodreads",
+        "goodreadsDescription": "Explora mi historial de lectura, libros actuales y favoritos.",
+        "goodreadsButton": "Visita mi perfil de Goodreads",
+        "genresTitle": "📖 Géneros Favoritos",
+        "genres": [
+          "Ciencia de Datos",
+          "Tecnología",
+          "Historia",
+          "Filosofía",
+          "Ciencia Ficción",
+          "Crecimiento Personal"
+        ]
+      },
+  "travels": {
+    "title": "✈️ Países visitados",
+    "listTitle": "🌍 Lista de Países",
+    "countries": {
+      "United States": "Estados Unidos",
+      "United Kingdom": "Reino Unido",
+      "Ireland": "Irlanda",
+      "Portugal": "Portugal",
+      "Spain": "España",
+      "France": "Francia",
+      "Germany": "Alemania",
+      "Switzerland": "Suiza",
+      "Italy": "Italia",
+      "Greece": "Grecia",
+      "Croatia": "Croacia",
+      "Monaco": "Mónaco",
+      "Vatican City": "Ciudad del Vaticano",
+      "Poland": "Polonia",
+      "Slovenia": "Eslovenia",
+      "Slovakia": "Eslovaquia",
+      "Austria": "Austria",
+      "Tunisia": "Túnez",
+      "Turkey": "Turquía",
+      "Russia": "Rusia",
+      "Andorra": "Andorra",
+      "Czech Republic": "República Checa"
+    }
   }
+    },
+    "strengthsWeaknesses": {
+      "strengths": {
+        "title": "💪 Fortalezas",
+        "items": [
+          "Pensamiento analítico",
+          "Resolución de problemas",
+          "Liderazgo",
+          "Aprendizaje rápido",
+          "Adaptabilidad",
+          "Atención al detalle"
+        ]
+      },
+      "weaknesses": {
+        "title": "⚠️ Debilidades",
+        "items": [
+          "Perfeccionismo",
+          "A veces sobreanalizo",
+          "Impaciencia con procesos lentos",
+          "Dificultad para delegar tareas"
+        ]
+      }
+    }
+  },
+  "projects": {
+      "title": "🛠 Proyectos",
+      "all": "Todos",
+      "readme": "Ver README",
+      "github": "🔗 Ver en GitHub"
+    },
+    "articles": {
+      "title": "📝 Últimos Artículos",
+      "readMedium": "Leer en Medium",
+      "readSubstack": "Leer en Substack"
+    },
+    "contact": {
+      "title": "📩 Contacta Conmigo",
+      "description": "Si tienes una pregunta, una idea de proyecto o simplemente quieres saludar, ¡no dudes en escribirme!",
+      "name": "Tu Nombre",
+      "email": "Tu Correo",
+      "message": "Tu Mensaje",
+      "send": "🚀 Enviar Mensaje",
+      "social": {
+        "email": "Correo",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "medium": "Medium"
+      },
+      "status": {
+        "success": "✅ ¡Mensaje enviado correctamente!",
+        "error": "❌ Error al enviar el mensaje. Intenta de nuevo.",
+        "loading": "Enviando..."
+      }
+    }
 }
