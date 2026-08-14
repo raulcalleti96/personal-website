@@ -13,6 +13,11 @@ import Projects from "./sections/Projects";
 import Articles from "./sections/Articles";
 import Contact from "./sections/Contact";
 import Empire from "./sections/Empire";
+import ProtectedRoute from "./portal/ProtectedRoute";
+import PortalLayout from "./portal/PortalLayout";
+import PortalHome from "./portal/pages/Home";
+import Brain from "./portal/pages/Brain";
+import Diario from "./portal/pages/Diario";
 
 function MainPage() {
   return (
@@ -85,12 +90,26 @@ function App() {
     <I18nextProvider i18n={i18n}>
       <ParallaxProvider>
         <div className="App min-h-screen text-luxury-white">
-          <Navbar />
           <Routes>
-            <Route path="/" element={<MainPage />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Navbar />
+                  <MainPage />
+                  <Footer />
+                </>
+              }
+            />
             <Route path="/clients" element={<Empire />} />
+            <Route element={<ProtectedRoute />}>
+              <Route element={<PortalLayout />}>
+                <Route path="/clients/home" element={<PortalHome />} />
+                <Route path="/clients/brain" element={<Brain />} />
+                <Route path="/clients/diario" element={<Diario />} />
+              </Route>
+            </Route>
           </Routes>
-          <Footer />
         </div>
       </ParallaxProvider>
     </I18nextProvider>

@@ -240,20 +240,35 @@
       "title": "EMPIRE Access",
       "quote": "El Empire State Building es lo más parecido al cielo en esta ciudad.",
       "quoteAuthor": "Deborah Kerr",
-      "welcome": "Bienvenido, {{email}}.",
       "form": {
-        "email": "Correo",
-        "password": "Contraseña",
-        "login": "Entrar",
+        "googleLogin": "Continuar con Google",
         "loggingIn": "Entrando...",
-        "logout": "Cerrar sesión",
+        "home": "Inicio"
+      }
+    },
+    "portal": {
+      "loading": "Cargando...",
+      "nav": {
         "home": "Inicio",
-        "errors": {
-          "missing": "Introduce email y contraseña.",
-          "invalidCredentials": "Correo o contraseña incorrectos.",
-          "tooManyRequests": "Demasiados intentos. Prueba más tarde.",
-          "generic": "Algo salió mal. Inténtalo de nuevo."
+        "brain": "Brain",
+        "diario": "Diario",
+        "logout": "Cerrar sesión"
+      },
+      "home": {
+        "comingSoon": "Próximamente.",
+        "sections": {
+          "finances": "Finanzas",
+          "tasks": "Tareas",
+          "habits": "Hábitos",
+          "calendar": "Calendario",
+          "goals": "Objetivos"
         }
+      },
+      "brain": {
+        "comingSoon": "Aquí aparecerán las ideas que captures desde Telegram."
+      },
+      "diario": {
+        "comingSoon": "Aquí se irán acumulando las entradas de tu diario."
       }
     }
 }

@@ -242,20 +242,35 @@
     "title": "EMPIRE Access",
     "quote": "The Empire State Building is the closest thing to heaven in this city.",
     "quoteAuthor": "Deborah Kerr",
-    "welcome": "Welcome, {{email}}.",
     "form": {
-      "email": "Email",
-      "password": "Password",
-      "login": "Login",
+      "googleLogin": "Continue with Google",
       "loggingIn": "Signing in...",
-      "logout": "Log out",
+      "home": "Home"
+    }
+  },
+  "portal": {
+    "loading": "Loading...",
+    "nav": {
       "home": "Home",
-      "errors": {
-        "missing": "Please enter email and password.",
-        "invalidCredentials": "Incorrect email or password.",
-        "tooManyRequests": "Too many attempts. Try again later.",
-        "generic": "Something went wrong. Please try again."
+      "brain": "Brain",
+      "diario": "Journal",
+      "logout": "Log out"
+    },
+    "home": {
+      "comingSoon": "Coming soon.",
+      "sections": {
+        "finances": "Finances",
+        "tasks": "Tasks",
+        "habits": "Habits",
+        "calendar": "Calendar",
+        "goals": "Goals"
       }
+    },
+    "brain": {
+      "comingSoon": "This is where your Telegram-captured ideas will show up."
+    },
+    "diario": {
+      "comingSoon": "Your journal entries will build up here."
     }
   }
 }
