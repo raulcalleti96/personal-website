@@ -242,13 +242,19 @@
     "title": "EMPIRE Access",
     "quote": "The Empire State Building is the closest thing to heaven in this city.",
     "quoteAuthor": "Deborah Kerr",
+    "welcome": "Welcome, {{email}}.",
     "form": {
       "email": "Email",
       "password": "Password",
       "login": "Login",
+      "loggingIn": "Signing in...",
+      "logout": "Log out",
       "home": "Home",
       "errors": {
-        "missing": "Please enter email and password."
+        "missing": "Please enter email and password.",
+        "invalidCredentials": "Incorrect email or password.",
+        "tooManyRequests": "Too many attempts. Try again later.",
+        "generic": "Something went wrong. Please try again."
       }
     }
   }

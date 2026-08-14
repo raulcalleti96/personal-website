@@ -240,13 +240,19 @@
       "title": "EMPIRE Access",
       "quote": "El Empire State Building es lo más parecido al cielo en esta ciudad.",
       "quoteAuthor": "Deborah Kerr",
+      "welcome": "Bienvenido, {{email}}.",
       "form": {
         "email": "Correo",
         "password": "Contraseña",
         "login": "Entrar",
+        "loggingIn": "Entrando...",
+        "logout": "Cerrar sesión",
         "home": "Inicio",
         "errors": {
-          "missing": "Introduce email y contraseña."
+          "missing": "Introduce email y contraseña.",
+          "invalidCredentials": "Correo o contraseña incorrectos.",
+          "tooManyRequests": "Demasiados intentos. Prueba más tarde.",
+          "generic": "Algo salió mal. Inténtalo de nuevo."
         }
       }
     }
