@@ -235,5 +235,19 @@
         "error": "❌ Error al enviar el mensaje. Intenta de nuevo.",
         "loading": "Enviando..."
       }
+    },
+    "empire": {
+      "title": "EMPIRE Access",
+      "quote": "El Empire State Building es lo más parecido al cielo en esta ciudad.",
+      "quoteAuthor": "Deborah Kerr",
+      "form": {
+        "email": "Correo",
+        "password": "Contraseña",
+        "login": "Entrar",
+        "home": "Inicio",
+        "errors": {
+          "missing": "Introduce email y contraseña."
+        }
+      }
     }
 }

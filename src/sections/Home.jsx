@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FiGlobe } from "react-icons/fi";
+import { Link } from "react-router-dom";
 // ... tus imports se mantienen igual
 
 const Home = () => {
@@ -153,6 +154,9 @@ const Home = () => {
             <motion.a href="#contact" className={`${buttonClass} bg-gris-medio text-blanco-suave`}>
               {t("home.buttons.contact")}
             </motion.a>
+            <Link to="/clients" className={`${buttonClass} bg-amber-500 text-black hover:bg-amber-400`}>
+              Empire
+            </Link>
           </div>
         </div>
       </div>

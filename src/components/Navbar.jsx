@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FiChevronDown, FiGlobe } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
@@ -64,6 +65,15 @@ function Navbar() {
               <li><a href="#about" className="block text-xl font-medium hover:underline">About</a></li>
               <li><a href="#projects" className="block text-xl font-medium hover:underline">Projects</a></li>
               <li><a href="#contact" className="block text-xl font-medium hover:underline">Contact</a></li>
+              <li>
+                <Link
+                  to="/clients"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block text-xl font-medium hover:underline"
+                >
+                  Empire
+                </Link>
+              </li>
             </ul>
           </motion.div>
         )}

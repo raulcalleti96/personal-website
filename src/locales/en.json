@@ -237,5 +237,19 @@
       "error": "❌ Error sending message. Try again.",
       "loading": "Sending..."
     }
+  },
+  "empire": {
+    "title": "EMPIRE Access",
+    "quote": "The Empire State Building is the closest thing to heaven in this city.",
+    "quoteAuthor": "Deborah Kerr",
+    "form": {
+      "email": "Email",
+      "password": "Password",
+      "login": "Login",
+      "home": "Home",
+      "errors": {
+        "missing": "Please enter email and password."
+      }
+    }
   }
 }
