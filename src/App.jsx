@@ -20,6 +20,8 @@ import Tasks from "./portal/pages/Tasks";
 import Habits from "./portal/pages/Habits";
 import Finances from "./portal/pages/Finances";
 import AccountDetail from "./portal/pages/AccountDetail";
+import RecurringPayments from "./portal/pages/RecurringPayments";
+import Budget from "./portal/pages/Budget";
 import Brain from "./portal/pages/Brain";
 import Diario from "./portal/pages/Diario";
 
@@ -113,6 +115,8 @@ function App() {
                 <Route path="/clients/habits" element={<Habits />} />
                 <Route path="/clients/finances" element={<Finances />} />
                 <Route path="/clients/finances/:accountId" element={<AccountDetail />} />
+                <Route path="/clients/finances/:accountId/recurring" element={<RecurringPayments />} />
+                <Route path="/clients/finances/:accountId/budget" element={<Budget />} />
                 <Route path="/clients/brain" element={<Brain />} />
                 <Route path="/clients/diario" element={<Diario />} />
               </Route>

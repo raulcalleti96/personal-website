@@ -262,6 +262,9 @@
         "viewAll": "Ver todas",
         "tasksEmpty": "No hay tareas pendientes ahora mismo.",
         "habitsEmpty": "Todavía no tienes hábitos.",
+        "financesWidget": {
+          "thisMonth": "gastado este mes"
+        },
         "sections": {
           "finances": "Finanzas",
           "tasks": "Tareas",
@@ -337,6 +340,27 @@
           "addCategory": "Añadir categoría",
           "descriptionLabel": "Descripción",
           "addTransaction": "Añadir movimiento"
+        },
+        "tabs": {
+          "transactions": "Movimientos",
+          "recurring": "Recurrentes",
+          "budget": "Presupuesto"
+        },
+        "recurring": {
+          "dayOfMonth": "Día del mes",
+          "add": "Añadir pago recurrente",
+          "empty": "Todavía no hay pagos recurrentes.",
+          "everyMonthOn": "Cada mes el día {{day}}",
+          "logThisMonth": "Registrar este mes",
+          "logged": "Registrado"
+        },
+        "budget": {
+          "plannedAmount": "Importe previsto",
+          "addLine": "Añadir línea de presupuesto",
+          "empty": "No hay líneas de presupuesto para este mes.",
+          "actual": "Real",
+          "diff": "Diferencia",
+          "total": "Total"
         }
       },
       "brain": {

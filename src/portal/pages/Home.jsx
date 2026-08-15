@@ -1,11 +1,11 @@
 import { useOutletContext } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FiDollarSign, FiCalendar, FiTarget } from "react-icons/fi";
+import { FiCalendar, FiTarget } from "react-icons/fi";
 import TasksWidget from "../components/TasksWidget";
 import HabitsWidget from "../components/HabitsWidget";
+import FinancesWidget from "../components/FinancesWidget";
 
 const placeholderSections = [
-  { key: "finances", icon: FiDollarSign },
   { key: "calendar", icon: FiCalendar },
   { key: "goals", icon: FiTarget },
 ];
@@ -49,6 +49,7 @@ const Home = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <TasksWidget />
         <HabitsWidget />
+        <FinancesWidget />
         {placeholderSections.map(({ key, icon }) => (
           <PlaceholderCard
             key={key}

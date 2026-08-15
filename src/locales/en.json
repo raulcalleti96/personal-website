@@ -264,6 +264,9 @@
       "viewAll": "View all",
       "tasksEmpty": "No tasks due right now.",
       "habitsEmpty": "No habits yet.",
+      "financesWidget": {
+        "thisMonth": "spent this month"
+      },
       "sections": {
         "finances": "Finances",
         "tasks": "Tasks",
@@ -339,6 +342,27 @@
         "addCategory": "Add category",
         "descriptionLabel": "Description",
         "addTransaction": "Add transaction"
+      },
+      "tabs": {
+        "transactions": "Transactions",
+        "recurring": "Recurring",
+        "budget": "Budget"
+      },
+      "recurring": {
+        "dayOfMonth": "Day of month",
+        "add": "Add recurring payment",
+        "empty": "No recurring payments yet.",
+        "everyMonthOn": "Every month on day {{day}}",
+        "logThisMonth": "Log this month",
+        "logged": "Logged"
+      },
+      "budget": {
+        "plannedAmount": "Planned amount",
+        "addLine": "Add budget line",
+        "empty": "No budget lines for this month.",
+        "actual": "Actual",
+        "diff": "Difference",
+        "total": "Total"
       }
     },
     "brain": {

@@ -4,13 +4,15 @@ import { useTranslation } from "react-i18next";
 import { FiArrowLeft, FiTrash2 } from "react-icons/fi";
 import { supabase } from "../../supabaseClient";
 import { formatMoney } from "../lib/money";
+import { toDateStr } from "../lib/period";
+import AccountTabs from "../components/AccountTabs";
 
 const emptyForm = {
   type: "expense",
   amount: "",
   categoryId: "",
   description: "",
-  occurredOn: new Date().toISOString().slice(0, 10),
+  occurredOn: toDateStr(new Date()),
 };
 
 const AccountDetail = () => {
@@ -138,6 +140,8 @@ const AccountDetail = () => {
       >
         <FiArrowLeft /> {t("portal.finances.back")}
       </Link>
+
+      <AccountTabs accountId={accountId} />
 
       <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
         <div>
