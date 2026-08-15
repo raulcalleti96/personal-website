@@ -12,6 +12,7 @@ import {
 } from "react-icons/fi";
 import { FaBrain } from "react-icons/fa";
 import { supabase } from "../supabaseClient";
+import DailyCheckin from "./components/DailyCheckin";
 
 const navItems = [
   { to: "/clients/home", labelKey: "portal.nav.home", icon: FiHome },
@@ -97,6 +98,8 @@ const PortalLayout = () => {
       <main className="flex-1 p-8 overflow-y-auto">
         <Outlet context={{ session }} />
       </main>
+
+      <DailyCheckin session={session} />
     </div>
   );
 };

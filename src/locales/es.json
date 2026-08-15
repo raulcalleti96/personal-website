@@ -377,7 +377,20 @@
         "comingSoon": "Aquí aparecerán las ideas que captures desde Telegram."
       },
       "diario": {
-        "comingSoon": "Aquí se irán acumulando las entradas de tu diario."
+        "checkin": {
+          "title": "¿Qué tal ayer?",
+          "subtitle": "Un check-in diario rápido — menos de un minuto.",
+          "moodLabel": "¿Cómo te sientes hoy?",
+          "bestLabel": "Lo mejor de ayer",
+          "improveLabel": "¿Qué mejorarías de ayer?",
+          "ratingLabel": "Valora el día de ayer",
+          "save": "Guardar",
+          "skip": "Saltar por hoy"
+        },
+        "entries": {
+          "empty": "Aquí se irán acumulando las entradas de tu diario.",
+          "yesterdayRating": "Ayer valorado con {{rating}}/5"
+        }
       }
     }
 }

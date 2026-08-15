@@ -379,7 +379,20 @@
       "comingSoon": "This is where your Telegram-captured ideas will show up."
     },
     "diario": {
-      "comingSoon": "Your journal entries will build up here."
+      "checkin": {
+        "title": "How was yesterday?",
+        "subtitle": "A quick daily check-in — takes less than a minute.",
+        "moodLabel": "How are you feeling today?",
+        "bestLabel": "Best part of yesterday",
+        "improveLabel": "What would you improve about yesterday?",
+        "ratingLabel": "Rate yesterday",
+        "save": "Save",
+        "skip": "Skip for today"
+      },
+      "entries": {
+        "empty": "Your journal entries will build up here.",
+        "yesterdayRating": "Yesterday rated {{rating}}/5"
+      }
     }
   }
 }
