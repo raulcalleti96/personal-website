@@ -8,6 +8,7 @@ import {
   FiCheckSquare,
   FiRepeat,
   FiDollarSign,
+  FiCalendar,
 } from "react-icons/fi";
 import { FaBrain } from "react-icons/fa";
 import { supabase } from "../supabaseClient";
@@ -17,6 +18,7 @@ const navItems = [
   { to: "/clients/tasks", labelKey: "portal.nav.tasks", icon: FiCheckSquare },
   { to: "/clients/habits", labelKey: "portal.nav.habits", icon: FiRepeat },
   { to: "/clients/finances", labelKey: "portal.nav.finances", icon: FiDollarSign },
+  { to: "/clients/calendar", labelKey: "portal.nav.calendar", icon: FiCalendar },
   { to: "/clients/brain", labelKey: "portal.nav.brain", icon: FaBrain },
   { to: "/clients/diario", labelKey: "portal.nav.diario", icon: FiBook },
 ];

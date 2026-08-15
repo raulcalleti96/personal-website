@@ -1,14 +1,11 @@
-import { useOutletContext } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FiCalendar, FiTarget } from "react-icons/fi";
 import TasksWidget from "../components/TasksWidget";
 import HabitsWidget from "../components/HabitsWidget";
 import FinancesWidget from "../components/FinancesWidget";
 
-const placeholderSections = [
-  { key: "calendar", icon: FiCalendar },
-  { key: "goals", icon: FiTarget },
-];
+const placeholderSections = [{ key: "goals", icon: FiTarget }];
 
 const PlaceholderCard = ({ icon: Icon, title, comingSoon }) => (
   <div className="bg-gris-oscuro border border-white/10 rounded-2xl p-6 flex flex-col gap-3">
@@ -16,6 +13,17 @@ const PlaceholderCard = ({ icon: Icon, title, comingSoon }) => (
     <h3 className="text-lg font-semibold">{title}</h3>
     <p className="text-sm text-gray-400">{comingSoon}</p>
   </div>
+);
+
+const CalendarCard = ({ t }) => (
+  <Link
+    to="/clients/calendar"
+    className="bg-gris-oscuro border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-naranja-vibrante transition"
+  >
+    <FiCalendar size={22} className="text-naranja-vibrante" />
+    <h3 className="text-lg font-semibold">{t("portal.home.sections.calendar")}</h3>
+    <p className="text-sm text-naranja-vibrante">{t("portal.home.viewCalendar")}</p>
+  </Link>
 );
 
 const getGreetingKey = () => {
@@ -50,6 +58,7 @@ const Home = () => {
         <TasksWidget />
         <HabitsWidget />
         <FinancesWidget />
+        <CalendarCard t={t} />
         {placeholderSections.map(({ key, icon }) => (
           <PlaceholderCard
             key={key}

@@ -255,6 +255,7 @@
       "tasks": "Tasks",
       "habits": "Habits",
       "finances": "Finances",
+      "calendar": "Calendar",
       "brain": "Brain",
       "diario": "Journal",
       "logout": "Log out"
@@ -262,6 +263,7 @@
     "home": {
       "comingSoon": "Coming soon.",
       "viewAll": "View all",
+      "viewCalendar": "View calendar",
       "tasksEmpty": "No tasks due right now.",
       "habitsEmpty": "No habits yet.",
       "financesWidget": {
@@ -364,6 +366,14 @@
         "diff": "Difference",
         "total": "Total"
       }
+    },
+    "calendar": {
+      "note": "Your Google Calendar, embedded. If it looks empty, make sure you're signed into Google in this browser.",
+      "manageCalendars": "Manage calendars",
+      "howToFindId": "Only your primary calendar shows by default. To add another one (a secondary or shared calendar): open Google Calendar → Settings → pick the calendar → Integrate calendar → copy its Calendar ID and paste it below.",
+      "idPlaceholder": "Calendar ID (e.g. abc123@group.calendar.google.com)",
+      "addCalendar": "Add",
+      "primary": "Primary"
     },
     "brain": {
       "comingSoon": "This is where your Telegram-captured ideas will show up."

@@ -22,6 +22,7 @@ import Finances from "./portal/pages/Finances";
 import AccountDetail from "./portal/pages/AccountDetail";
 import RecurringPayments from "./portal/pages/RecurringPayments";
 import Budget from "./portal/pages/Budget";
+import Calendar from "./portal/pages/Calendar";
 import Brain from "./portal/pages/Brain";
 import Diario from "./portal/pages/Diario";
 
@@ -117,6 +118,7 @@ function App() {
                 <Route path="/clients/finances/:accountId" element={<AccountDetail />} />
                 <Route path="/clients/finances/:accountId/recurring" element={<RecurringPayments />} />
                 <Route path="/clients/finances/:accountId/budget" element={<Budget />} />
+                <Route path="/clients/calendar" element={<Calendar />} />
                 <Route path="/clients/brain" element={<Brain />} />
                 <Route path="/clients/diario" element={<Diario />} />
               </Route>
