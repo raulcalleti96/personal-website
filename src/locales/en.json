@@ -254,6 +254,7 @@
       "home": "Home",
       "tasks": "Tasks",
       "habits": "Habits",
+      "finances": "Finances",
       "brain": "Brain",
       "diario": "Journal",
       "logout": "Log out"
@@ -314,6 +315,30 @@
         "weekly": "Weekly",
         "monthly": "Monthly",
         "yearly": "Yearly"
+      }
+    },
+    "finances": {
+      "empty": "No accounts yet.",
+      "back": "Back to accounts",
+      "notFound": "Account not found.",
+      "noTransactions": "No transactions yet.",
+      "types": {
+        "income": "Income",
+        "expense": "Expense"
+      },
+      "form": {
+        "nameLabel": "Account name",
+        "add": "Add account",
+        "shareWith": "Share with {{name}}",
+        "unshare": "Stop sharing",
+        "amountLabel": "Amount",
+        "categoryLabel": "Category",
+        "noCategory": "No category",
+        "dateLabel": "Date",
+        "newCategoryPlaceholder": "New category name",
+        "addCategory": "Add category",
+        "descriptionLabel": "Description",
+        "addTransaction": "Add transaction"
       }
     },
     "brain": {

@@ -252,6 +252,7 @@
         "home": "Inicio",
         "tasks": "Tareas",
         "habits": "Hábitos",
+        "finances": "Finanzas",
         "brain": "Brain",
         "diario": "Diario",
         "logout": "Cerrar sesión"
@@ -312,6 +313,30 @@
           "weekly": "Semanal",
           "monthly": "Mensual",
           "yearly": "Anual"
+        }
+      },
+      "finances": {
+        "empty": "Todavía no tienes cuentas.",
+        "back": "Volver a cuentas",
+        "notFound": "Cuenta no encontrada.",
+        "noTransactions": "Todavía no hay movimientos.",
+        "types": {
+          "income": "Ingreso",
+          "expense": "Gasto"
+        },
+        "form": {
+          "nameLabel": "Nombre de la cuenta",
+          "add": "Añadir cuenta",
+          "shareWith": "Compartir con {{name}}",
+          "unshare": "Dejar de compartir",
+          "amountLabel": "Importe",
+          "categoryLabel": "Categoría",
+          "noCategory": "Sin categoría",
+          "dateLabel": "Fecha",
+          "newCategoryPlaceholder": "Nombre de nueva categoría",
+          "addCategory": "Añadir categoría",
+          "descriptionLabel": "Descripción",
+          "addTransaction": "Añadir movimiento"
         }
       },
       "brain": {
