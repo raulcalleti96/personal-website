@@ -1,11 +1,13 @@
 import { NavLink, Outlet, useNavigate, useOutletContext } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FiHome, FiLogOut, FiGlobe, FiBook } from "react-icons/fi";
+import { FiHome, FiLogOut, FiGlobe, FiBook, FiCheckSquare, FiRepeat } from "react-icons/fi";
 import { FaBrain } from "react-icons/fa";
 import { supabase } from "../supabaseClient";
 
 const navItems = [
   { to: "/clients/home", labelKey: "portal.nav.home", icon: FiHome },
+  { to: "/clients/tasks", labelKey: "portal.nav.tasks", icon: FiCheckSquare },
+  { to: "/clients/habits", labelKey: "portal.nav.habits", icon: FiRepeat },
   { to: "/clients/brain", labelKey: "portal.nav.brain", icon: FaBrain },
   { to: "/clients/diario", labelKey: "portal.nav.diario", icon: FiBook },
 ];

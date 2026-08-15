@@ -250,18 +250,68 @@
       "loading": "Cargando...",
       "nav": {
         "home": "Inicio",
+        "tasks": "Tareas",
+        "habits": "Hábitos",
         "brain": "Brain",
         "diario": "Diario",
         "logout": "Cerrar sesión"
       },
       "home": {
         "comingSoon": "Próximamente.",
+        "viewAll": "Ver todas",
+        "tasksEmpty": "No hay tareas pendientes ahora mismo.",
+        "habitsEmpty": "Todavía no tienes hábitos.",
         "sections": {
           "finances": "Finanzas",
           "tasks": "Tareas",
           "habits": "Hábitos",
           "calendar": "Calendario",
           "goals": "Objetivos"
+        }
+      },
+      "tasks": {
+        "pending": "Pendientes",
+        "completed": "Completadas",
+        "empty": "No tienes tareas pendientes.",
+        "delete": "Eliminar",
+        "form": {
+          "titleLabel": "Título",
+          "descriptionLabel": "Descripción",
+          "categoryLabel": "Categoría",
+          "dueTypeLabel": "Fecha límite",
+          "add": "Añadir tarea"
+        },
+        "categories": {
+          "personal": "Personal",
+          "deporte": "Deporte",
+          "casa": "Casa",
+          "finanzas": "Finanzas",
+          "violin": "Violín",
+          "trabajo": "Trabajo"
+        },
+        "dueTypes": {
+          "none": "Sin fecha límite",
+          "day": "Día concreto",
+          "month": "Este mes",
+          "year": "Este año"
+        }
+      },
+      "habits": {
+        "empty": "Todavía no tienes hábitos.",
+        "streak": "Racha: {{count}}",
+        "target": "Objetivo: {{count}}",
+        "delete": "Eliminar",
+        "form": {
+          "titleLabel": "Título",
+          "frequencyLabel": "Frecuencia",
+          "targetLabel": "Racha objetivo",
+          "add": "Añadir hábito"
+        },
+        "frequencies": {
+          "daily": "Diario",
+          "weekly": "Semanal",
+          "monthly": "Mensual",
+          "yearly": "Anual"
         }
       },
       "brain": {

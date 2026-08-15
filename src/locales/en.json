@@ -252,18 +252,68 @@
     "loading": "Loading...",
     "nav": {
       "home": "Home",
+      "tasks": "Tasks",
+      "habits": "Habits",
       "brain": "Brain",
       "diario": "Journal",
       "logout": "Log out"
     },
     "home": {
       "comingSoon": "Coming soon.",
+      "viewAll": "View all",
+      "tasksEmpty": "No tasks due right now.",
+      "habitsEmpty": "No habits yet.",
       "sections": {
         "finances": "Finances",
         "tasks": "Tasks",
         "habits": "Habits",
         "calendar": "Calendar",
         "goals": "Goals"
+      }
+    },
+    "tasks": {
+      "pending": "Pending",
+      "completed": "Completed",
+      "empty": "No pending tasks.",
+      "delete": "Delete",
+      "form": {
+        "titleLabel": "Title",
+        "descriptionLabel": "Description",
+        "categoryLabel": "Category",
+        "dueTypeLabel": "Due",
+        "add": "Add task"
+      },
+      "categories": {
+        "personal": "Personal",
+        "deporte": "Sport",
+        "casa": "Home",
+        "finanzas": "Finance",
+        "violin": "Violin",
+        "trabajo": "Work"
+      },
+      "dueTypes": {
+        "none": "No deadline",
+        "day": "Specific day",
+        "month": "This month",
+        "year": "This year"
+      }
+    },
+    "habits": {
+      "empty": "No habits yet.",
+      "streak": "Streak: {{count}}",
+      "target": "Target: {{count}}",
+      "delete": "Delete",
+      "form": {
+        "titleLabel": "Title",
+        "frequencyLabel": "Frequency",
+        "targetLabel": "Target streak",
+        "add": "Add habit"
+      },
+      "frequencies": {
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly",
+        "yearly": "Yearly"
       }
     },
     "brain": {

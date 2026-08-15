@@ -16,6 +16,8 @@ import Empire from "./sections/Empire";
 import ProtectedRoute from "./portal/ProtectedRoute";
 import PortalLayout from "./portal/PortalLayout";
 import PortalHome from "./portal/pages/Home";
+import Tasks from "./portal/pages/Tasks";
+import Habits from "./portal/pages/Habits";
 import Brain from "./portal/pages/Brain";
 import Diario from "./portal/pages/Diario";
 
@@ -105,6 +107,8 @@ function App() {
             <Route element={<ProtectedRoute />}>
               <Route element={<PortalLayout />}>
                 <Route path="/clients/home" element={<PortalHome />} />
+                <Route path="/clients/tasks" element={<Tasks />} />
+                <Route path="/clients/habits" element={<Habits />} />
                 <Route path="/clients/brain" element={<Brain />} />
                 <Route path="/clients/diario" element={<Diario />} />
               </Route>
