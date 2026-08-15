@@ -376,7 +376,15 @@
       "primary": "Primary"
     },
     "brain": {
-      "comingSoon": "This is where your Telegram-captured ideas will show up."
+      "connected": "Telegram connected (Chat ID {{chatId}})",
+      "disconnect": "Disconnect",
+      "howToConnect": "Send a message to your bot on Telegram — it'll reply with your Chat ID.",
+      "pasteChatId": "Paste that Chat ID below to connect it to your account.",
+      "chatIdPlaceholder": "Chat ID",
+      "connect": "Connect",
+      "notePlaceholder": "Jot something down...",
+      "addNote": "Add",
+      "empty": "This is where your Telegram-captured ideas will show up."
     },
     "diario": {
       "checkin": {

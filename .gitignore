@@ -79,6 +79,9 @@ web_modules/
 .env.production.local
 .env.local
 
+# Supabase CLI local state
+supabase/.temp
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
