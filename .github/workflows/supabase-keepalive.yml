@@ -1,0 +1,25 @@
+# Supabase's free plan pauses projects with no activity for 7+ days.
+# This pings the database twice a week so the project never counts as idle.
+name: Supabase keep-alive
+
+on:
+  schedule:
+    - cron: "17 7 * * 1,4" # Mondays and Thursdays, 07:17 UTC
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Query the database through the REST API
+        env:
+          SUPABASE_URL: https://blhsmlnypfpkeggzavzn.supabase.co
+          # Public anon key (it already ships in the website bundle); protected by RLS.
+          SUPABASE_ANON_KEY: sb_publishable_WkEQU_wVc1SPKgne5Av8FQ__BAsp4PQ
+        run: |
+          status=$(curl -s -o /dev/null -w "%{http_code}" \
+            "$SUPABASE_URL/rest/v1/contact_messages?select=id&limit=1" \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            -H "Authorization: Bearer $SUPABASE_ANON_KEY")
+          echo "Supabase responded with HTTP $status"
+          test "$status" = "200"
