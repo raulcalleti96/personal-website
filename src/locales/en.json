@@ -1,12 +1,54 @@
 {
   "home": {
     "title": "Raúl Santiago",
-    "subtitle": "Data Analyst | AI & Business Enthusiast",
-    "buttons": {
-      "cv": "Download CV",
-      "blog": "Blog",
-      "projects": "Projects",
-      "contact": "Contact"
+    "hero": {
+      "role": "Data Engineer · Team Lead",
+      "name": "Raúl Santiago",
+      "tagline": "I turn data into decisions that move teams forward.",
+      "cta": "Get in touch"
+    },
+    "proof": {
+      "label": "Selected Proof",
+      "stats": {
+        "years": {
+          "value": "5+",
+          "label": "Years of experience"
+        },
+        "projects": {
+          "value": "10+",
+          "label": "Projects completed"
+        },
+        "location": {
+          "value": "Zamora",
+          "label": "Spain"
+        }
+      },
+      "blurb": "As a Senior Data Engineer at Devoteam, I design and maintain cloud data pipelines on Google Cloud Platform, helping teams turn raw data into decisions they can trust.",
+      "cta": "Get in touch"
+    },
+    "scroll": "Scroll",
+    "now": {
+      "label": "Now",
+      "building": {
+        "label": "Building",
+        "title": "Hermandad 2.0",
+        "subtitle": "In development"
+      },
+      "reading": {
+        "label": "Reading",
+        "title": "Thinking, Fast and Slow",
+        "subtitle": "Daniel Kahneman"
+      },
+      "listening": {
+        "label": "Listening",
+        "title": "23",
+        "subtitle": "Sam Hunt"
+      },
+      "watching": {
+        "label": "Watching",
+        "title": "How I Met Your Mother",
+        "subtitle": "TV series"
+      }
     },
     "greeting": {
       "morning": "Good morning 🌇",
@@ -23,55 +65,129 @@
       "easter": "Happy Easter! 🐣"
     }
   },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "articles": "Writing",
+    "contact": "Contact",
+    "radio": "Navidudu"
+  },
   "about": {
     "title": "About Me",
-    "description": "🚀 Raúl Santiago Prieto 🚀✨ I’m a Data Analyst at Elastic and former Software Engineering Analyst at Banco Santander, with experience in software engineering and automation. I was also a football referee for the Spanish Federation. Passionate about exploration, technology, and innovation, I turn data into decisions. Let’s connect and shape the future together!",
+    "sectionLabel": "About",
+    "mission": {
+      "p1": "I build the dashboards and pipelines people rely on to make sense of their data: BigQuery pipelines at Devoteam, DBT models and reports at Elastic, and Empire, a data-analysis platform I built for sports and business clients after using it to break down my own tennis matches. I care about the query behind the chart as much as the chart itself.",
+      "p2": "I have five years of production data engineering experience, most recently as a GCP Data Engineer at Devoteam. Outside that role, I build and ship my own products, including RSNexTech, my personal platform, and Empire, which started as a way to track my own tennis results.",
+      "p3": "I do my best work when I get to own the messy middle: write the spec, shape the pipeline, and still care about the report a stakeholder actually reads. These days that includes the AI tools I use every day — I use Claude Code and Gemini, then wire their output into the kind of Git and Jira workflow I've written about, so nothing ships without review."
+    },
+    "toolkit": {
+      "label": "Technical Toolkit",
+      "headline": "The stack under the hood."
+    },
+    "moreLabel": "More about me",
+    "vitals": {
+      "label": "Vitals",
+      "current": "Currently",
+      "previous": "Previously",
+      "location": "Located in",
+      "locationValue": "Zamora, Spain",
+      "openTo": "Open to",
+      "openToValue": "Team Lead, Product Management"
+    },
+    "timeline": {
+      "label": "Through the years"
+    },
     "nav": {
-      "experience": "💼 Experience",
-      "education": "📚 Education",
-      "technologies": "🧑🏻‍💻 Technologies",
-      "certifications": "🎓 Certifications",
-      "hobbies": "🎻 Hobbies",
-      "strengths_weaknesses": "⚖️ Strengths & Weaknesses",
-      "cv": "📄Resume"
+      "experience": "Experience",
+      "education": "Education",
+      "technologies": "Technologies",
+      "certifications": "Certifications",
+      "hobbies": "Hobbies",
+      "strengths_weaknesses": "Strengths & Weaknesses",
+      "cv": "Resume"
     },
     "cv": {
-    "title": "My CV",
-    "description": "Here you can download the latest version of my resume in PDF format.",
-    "download": "Download CV"
-  },
+      "title": "My CV",
+      "description": "Here you can download the latest version of my resume in PDF format.",
+      "download": "Download CV"
+    },
     "experience": [
+      {
+        "company": "Devoteam",
+        "position": "GCP Data Engineer",
+        "years": "10/2025 - Present",
+        "location": "Remote",
+        "description": "Data engineering on Google Cloud Platform: designing and maintaining cloud data pipelines.",
+        "skills": [
+          "GCP",
+          "BigQuery",
+          "SQL",
+          "Python",
+          "ETL"
+        ]
+      },
+      {
+        "company": "SOLTEL Group",
+        "position": "Data Engineer",
+        "years": "05/2025 - 10/2025",
+        "location": "Remote",
+        "description": "Data analysis and modeling for business cases. Built dashboards and automations (SQL, Python, DBT/ETL, BigQuery/Looker).",
+        "skills": [
+          "SQL",
+          "Python",
+          "ETL",
+          "DBT",
+          "BigQuery",
+          "Looker Studio",
+          "Automation"
+        ]
+      },
       {
         "company": "Elastic",
         "position": "Data Analyst",
-        "years": "2024 - Present",
-        "location": "Zamora - USA (Worldwide remote)",
-        "description": "Part of the Observability team, I work with DBT models and report creation using DBT, ETL, SQL, Python, Elasticsearch, Pipelines (Buolkite), Looker Studio, and BigQuery.",
-        "skills": ["DBT", "ETL", "SQL", "Python", "Elasticsearch", "BigQuery", "Looker Studio"]
+        "years": "07/2024 - 07/2025",
+        "location": "Spain",
+        "description": "Part of the Observability team, I worked with DBT models and report creation using DBT, ETL, SQL, Python, Elasticsearch, Pipelines (Buildkite), Looker Studio, and BigQuery.",
+        "skills": [
+          "DBT",
+          "ETL",
+          "SQL",
+          "Python",
+          "Elasticsearch",
+          "BigQuery",
+          "Looker Studio"
+        ]
       },
       {
-        "company": "Banco Santander Digital Services",
-        "position": "Software Engineering Analyst",
-        "years": "2022 - 2024",
-        "location": "Madrid and Zamora (Hybrid)",
-        "description": "Software analyst (Java, Python, SQL, COBOL-JCL), responsible for OCR, incident analysis, and BI (SQL, NoSQL, Java, Python, PowerBI).",
-        "skills": ["SQL", "NoSQL", "Java", "Python", "PowerBI", "OCR", "BI"]
+        "company": "Santander Global T&O",
+        "position": "Software Engineering Jr. Analyst",
+        "years": "02/2022 - 07/2024",
+        "location": "Madrid, Spain",
+        "description": "Software engineering analyst: OCR analysis, incident analysis, and Power BI dashboard development.",
+        "skills": [
+          "SQL",
+          "Java",
+          "Python",
+          "Power BI",
+          "OCR",
+          "Incident analysis"
+        ]
       },
       {
         "company": "NTT DATA",
-        "position": "RPA-OCR Software Developer",
-        "years": "2021 - 2022",
-        "location": "Zamora and Bilbao (Remote)",
-        "description": "Developer of automations in the OCR team for document scanning (ABBY, Eclipse) and RPA (Blue Prism, UiPath).",
-        "skills": ["SQL", "Java", "Python", "Atlassian"]
-      },
-      {
-        "company": "Spanish Football Federation (RFEF)",
-        "position": "Football Referee",
-        "years": "2016 - 2023",
-        "location": "Zamora and Bilbao (On-site)",
-        "description": "Referee talent at the Technological Referee Center (2017-2019). Participated in Preferente, 2B, 3rd Division, 2nd Women’s National, and National Youth League.",
-        "skills": ["Problem-solving", "Communication", "Decision-making", "Handling pressure", "Logic", "Reasoning", "Leadership"]
+        "position": "RPA Software Developer",
+        "years": "03/2021 - 02/2022",
+        "location": "Salamanca, Spain",
+        "description": "RPA automation developer (Blue Prism, UiPath) for automated document scanning.",
+        "skills": [
+          "RPA",
+          "Blue Prism",
+          "UiPath",
+          "SQL",
+          "Java",
+          "Python"
+        ]
       }
     ],
     "education": [
@@ -107,29 +223,64 @@
       }
     ],
     "certifications": [
-      { "title": "Project Management Fundamentals", "issuer": "LinkedIn" },
-      { "title": "Learn Big Data: Data Analysis", "issuer": "LinkedIn" },
-      { "title": "Big Data Fundamentals", "issuer": "LinkedIn" },
-      { "title": "Change Management", "issuer": "LinkedIn" },
-      { "title": "Software Testing: Tools", "issuer": "LinkedIn" },
-      { "title": "Test Automation Foundations", "issuer": "LinkedIn" },
-      { "title": "Python 3 Programming Course", "issuer": "OpenWebinars" },
-      { "title": "Driver’s License B", "issuer": "DGT" }
+      {
+        "title": "Project Management Fundamentals",
+        "issuer": "LinkedIn"
+      },
+      {
+        "title": "Learn Big Data: Data Analysis",
+        "issuer": "LinkedIn"
+      },
+      {
+        "title": "Big Data Fundamentals",
+        "issuer": "LinkedIn"
+      },
+      {
+        "title": "Change Management",
+        "issuer": "LinkedIn"
+      },
+      {
+        "title": "Software Testing: Tools",
+        "issuer": "LinkedIn"
+      },
+      {
+        "title": "Test Automation Foundations",
+        "issuer": "LinkedIn"
+      },
+      {
+        "title": "Python 3 Programming Course",
+        "issuer": "OpenWebinars"
+      },
+      {
+        "title": "Driver’s License B",
+        "issuer": "DGT"
+      }
     ],
     "hobbies": {
       "tennis": {
-        "title": "🎾 Tennis",
+        "title": "Tennis",
         "description": "I compete in the ITF World Tour. Check out my profile below."
       },
+      "music": {
+        "title": "Music",
+        "wherePlayed": "Where I've played"
+      },
+      "basketball": {
+        "title": "Basketball Referee",
+        "description": "I referee basketball for the Spanish Basketball Federation (FEB).",
+        "linkLabel": "Spanish Basketball Federation (FEB)"
+      },
       "violin": {
-        "title": "🎻 Violin",
+        "title": "Violin",
         "education": "Conservatorio Miguel Manzano (Zamora)",
-        "wherePlayed": "Orchestra of the Conservatory (Concertino) (2021 - Present)"
+        "wherePlayed": [
+          "Orchestra of the Conservatory (Concertino) (2021 - Present)",
+          "Youth Orchestra of Valladolid (2022 - Present)"
+        ]
       },
       "percussion": {
         "title": "🥁 Percussion",
         "wherePlayed": [
-          "Youth Symphony Orchestra of Valladolid (2022)",
           "Band of the Brotherhood of Our Mother of Zamora (2022 - Present)"
         ]
       },
@@ -180,7 +331,8 @@
           "Russia": "Russia",
           "Andorra": "Andorra",
           "Czech Republic": "Czech Republic"
-}}
+        }
+      }
     },
     "strengthsWeaknesses": {
       "strengths": {
@@ -206,35 +358,198 @@
     }
   },
   "projects": {
-    "title": "🛠 Projects",
-    "all": "All",
-    "readme": "View README",
-    "github": "🔗 View on GitHub"
+    "sectionLabel": "Selected Work",
+    "title": "Projects",
+    "headline": "Six products, all mine, in different stages.",
+    "intro": "Personal tools and client platforms I design and build end to end, from first sketch to production.",
+    "contentsLabel": "Contents",
+    "plateLabel": "Plate",
+    "roleLabel": "Role",
+    "periodLabel": "Period",
+    "statusLabel": "Status",
+    "viewLive": "Visit site",
+    "viewGithub": "View on GitHub",
+    "comingSoon": "Coming soon",
+    "items": [
+      {
+        "plate": "B.01",
+        "category": "Personal website",
+        "status": "Updating to V2",
+        "title": "RSNexTech",
+        "role": "Full-Stack Developer · Solo",
+        "period": "V1 2024 — V2 2026",
+        "contentsTagline": "PERSONAL PORTFOLIO AND THE ENTRY POINT TO EVERYTHING ELSE",
+        "quote": "A personal portfolio, where my career got its start.",
+        "quoteAuthor": "",
+        "description": "RSNexTech is the personal site that shows my work and CV in one place — accessible and intuitive, built to introduce me, walk through my projects and career, and give a way into my products and to get in touch.",
+        "tech": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React",
+          "Firebase Hosting",
+          "Firestore",
+          "Cloud Functions",
+          "GitHub API",
+          "Google AdSense",
+          "Medium API"
+        ],
+        "linkLabel": "RSNEXTECH.COM",
+        "linkUrl": "https://rsnextech.com",
+        "linkNote": "Domain being renewed",
+        "github": "https://github.com/raulcalleti96/personal-website"
+      },
+      {
+        "plate": "B.02",
+        "category": "Services platform",
+        "status": "Updating to V2",
+        "title": "Empire Platform",
+        "role": "Full-Stack Developer · Solo",
+        "period": "V1 2024 — V2 2026",
+        "contentsTagline": "THE CENTRAL GATEWAY TO EVERY SERVICE I BUILD",
+        "quote": "The Empire State Building is the closest thing to heaven in this city.",
+        "quoteAuthor": "Deborah Kerr",
+        "description": "Empire Platform is the client-services gateway: a single, centralized connection point to every service I build, so clients never need their own domain and errors and management stay in one place.",
+        "tech": [
+          "React",
+          "React Router",
+          "Supabase (Auth, Postgres, Edge Functions)",
+          "Tailwind CSS",
+          "Framer Motion"
+        ],
+        "linkLabel": "RSNEXTECH.COM/EMPIRE",
+        "linkUrl": "https://rsnextech.com/empire",
+        "linkNote": "Domain being renewed",
+        "github": "https://github.com/raulcalleti96/personal-website"
+      },
+      {
+        "plate": "B.03",
+        "category": "Institutional website",
+        "status": "In production · V2 in progress (2027)",
+        "title": "Espíritu Santo Zamora",
+        "role": "Full-Stack Developer",
+        "period": "V1 2026 — V2 2027",
+        "contentsTagline": "INFORMATION AND MANAGEMENT FOR THE BROTHERHOOD, IN A NEW LOOK",
+        "quote": "The institutional website of the Hermandad de Semana Santa de Zamora.",
+        "quoteAuthor": "",
+        "description": "The official site of the Hermandad del Santísimo Cristo del Espíritu Santo de Zamora is now, after two decades, a real information and management hub — connected to databases and registration forms, giving the brotherhood a modernized, new image. V2 is already in the works for 2027.",
+        "tech": [
+          "TSX",
+          "TypeScript",
+          "PL/pgSQL",
+          "Python",
+          "CSS"
+        ],
+        "linkLabel": "ESPIRITUSANTOZAMORA.ORG",
+        "linkUrl": "https://espiritusantozamora.org",
+        "linkNote": "",
+        "github": ""
+      },
+      {
+        "plate": "B.04",
+        "category": "Institutional management platform",
+        "status": "In production · V2 in progress (2027)",
+        "title": "Gestión ESZ 2.0",
+        "role": "Full-Stack Developer",
+        "period": "V1 2026 — V2 2027",
+        "contentsTagline": "THE BACK OFFICE THAT STREAMLINES THE BROTHERHOOD'S MANAGEMENT",
+        "quote": "The institutional management platform of the Hermandad de Semana Santa de Zamora.",
+        "quoteAuthor": "",
+        "description": "Alongside the institutional site, this platform manages the brotherhood itself: member records, correspondence, treasury, reports, and analytics — a working app, live today, that speeds up day-to-day management.",
+        "tech": [
+          "TSX",
+          "TypeScript",
+          "PL/pgSQL",
+          "Python",
+          "CSS"
+        ],
+        "linkLabel": "GESTION.ESPIRITUSANTOZAMORA.ORG",
+        "linkUrl": "https://gestion.espiritusantozamora.org",
+        "linkNote": "",
+        "github": ""
+      },
+      {
+        "plate": "B.05",
+        "category": "Institutional website",
+        "status": "In development · Launch pending (2027)",
+        "title": "Web 7 Palabras",
+        "role": "Full-Stack Developer",
+        "period": "V1 2027",
+        "contentsTagline": "A SECOND BROTHERHOOD, A RENEWED PRESENCE ONLINE",
+        "quote": "A brotherhood's public face, rebuilt for the web.",
+        "quoteAuthor": "",
+        "description": "Built on the same foundations as the Espíritu Santo site but shaped to the identity of the Siete Palabras brotherhood: news, activities, and member registration in one place, backed by a database so the brotherhood can publish and respond without relying on third parties.",
+        "tech": [
+          "TSX",
+          "TypeScript",
+          "PL/pgSQL",
+          "Python",
+          "CSS"
+        ],
+        "linkLabel": "7PALABRASZAMORA.ES",
+        "linkUrl": "https://7palabraszamora.es",
+        "linkNote": "Launching in 2027",
+        "github": ""
+      },
+      {
+        "plate": "B.06",
+        "category": "Institutional management platform",
+        "status": "In development · Launch pending (2027)",
+        "title": "Gestión 7 Palabras",
+        "role": "Full-Stack Developer",
+        "period": "V1 2027",
+        "contentsTagline": "MEMBER MANAGEMENT AND CLEAN DATA FOR THE SIETE PALABRAS",
+        "quote": "The management back office for the brotherhood, with its data in order.",
+        "quoteAuthor": "",
+        "description": "The management counterpart to the Siete Palabras website: member records, correspondence, treasury, and reporting. It adds a data-cleaning layer on top — consolidating and tidying the brotherhood's legacy records so everything the platform shows can be trusted.",
+        "tech": [
+          "TSX",
+          "TypeScript",
+          "PL/pgSQL",
+          "Python",
+          "CSS",
+          "Data cleaning"
+        ],
+        "linkLabel": "GESTION.7PALABRASZAMORA.ES",
+        "linkUrl": "https://gestion.7palabraszamora.es",
+        "linkNote": "Launching in 2027",
+        "github": ""
+      }
+    ]
   },
   "articles": {
-    "title": "📝 Latest Articles",
-    "loading": "Loading articles...",
-    "empty": "No articles found.",
-    "unknownDate": "Unknown Date",
-    "readMedium": "Read on Medium",
-    "readSubstack": "Read on Substack"
+    "sectionLabel": "Writing",
+    "title": "Latest Articles",
+    "readOn": "Read on LinkedIn",
+    "items": [
+      {
+        "title": "Empire Workspace: Digital Hub for Data Analysis",
+        "date": "September 2025",
+        "summary": "How Empire grew from analyzing my own tennis matches into a data-analysis platform for sports and business clients, built with React, Firebase, and Tableau."
+      },
+      {
+        "title": "The Development Power Trio: Integrating Gemini AI with Git and Jira",
+        "date": "December 2025",
+        "summary": "How Gemini AI automates user stories in Jira, reviews code in Git, and writes commit messages — an AI-augmented workflow that speeds up delivery end to end."
+      }
+    ]
   },
   "contact": {
-    "title": "📩 Get in Touch",
-    "description": "Whether you have a question, a project idea, or just want to say hi, feel free to reach out!",
+    "sectionLabel": "Contact",
+    "title": "Get in Touch",
+    "description": "Whether you have a question, a project idea, or just want to say hi, feel free to reach out.",
     "name": "Your Name",
     "email": "Your Email",
     "message": "Your Message",
-    "send": "🚀 Send Message",
+    "send": "Send Message",
     "social": {
       "email": "Email",
       "linkedin": "LinkedIn",
-      "github": "GitHub",
-      "medium": "Medium"
+      "github": "GitHub"
     },
     "status": {
-      "success": "✅ Message sent successfully!",
-      "error": "❌ Error sending message. Try again.",
+      "success": "Message sent successfully.",
+      "error": "Error sending message. Try again.",
       "loading": "Sending..."
     }
   },
@@ -245,7 +560,12 @@
     "form": {
       "googleLogin": "Continue with Google",
       "loggingIn": "Signing in...",
-      "home": "Home"
+      "home": "Home",
+      "or": "or",
+      "email": "Email",
+      "password": "Password",
+      "emailLogin": "Sign in with email",
+      "invalid": "Incorrect email or password."
     }
   },
   "portal": {
@@ -258,7 +578,55 @@
       "calendar": "Calendar",
       "brain": "Brain",
       "diario": "Journal",
-      "logout": "Log out"
+      "logout": "Log out",
+      "switchApp": "Switch app"
+    },
+    "select": {
+      "greeting": "Welcome back, {{name}}",
+      "title": "Which space do you want to open?",
+      "management": {
+        "title": "Empire-Gestión",
+        "description": "Tasks, habits, finances, calendar, Brain and journal — your day-to-day management dashboard."
+      },
+      "focus": {
+        "title": "Empire-Focus",
+        "description": "A clock, New York time, and a Pomodoro timer to help you protect your focus."
+      },
+      "radio": {
+        "title": "Empire-Radio",
+        "description": "The Christmas album Feliz Navidudu: nine songs and a letter."
+      }
+    },
+    "focus": {
+      "back": "Back",
+      "newYork": "New York",
+      "pomodoro": {
+        "work": "Focus",
+        "break": "Break",
+        "start": "Start",
+        "pause": "Pause",
+        "reset": "Reset",
+        "completed": "{{count}} pomodoros completed",
+        "workDoneLabel": "Focus block complete",
+        "breakDoneLabel": "Break's over",
+        "confirmBreak": "Start the {{minutes}}-min break?",
+        "confirmWork": "Start the next {{minutes}}-min focus block?",
+        "startBreak": "Start break",
+        "startWork": "Start focus"
+      },
+      "spotify": {
+        "connect": "Connect Spotify",
+        "disconnect": "Disconnect",
+        "nothingPlaying": "Nothing playing"
+      },
+      "history": {
+        "title": "Report",
+        "today": "Today",
+        "week": "This week",
+        "total": "All-time",
+        "sessions": "{{count}} sessions",
+        "minutes": "{{minutes}} min"
+      }
     },
     "home": {
       "comingSoon": "Coming soon.",
@@ -402,5 +770,10 @@
         "yesterdayRating": "Yesterday rated {{rating}}/5"
       }
     }
+  },
+  "cookies": {
+    "message": "I use Google Analytics (cookies) to understand how the site is used and improve it. It only turns on if you accept.",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }

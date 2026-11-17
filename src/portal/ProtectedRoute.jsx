@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { supabase } from "../supabaseClient";
+import { isRadioOnly } from "./lib/access";
 
 const ProtectedRoute = () => {
   const { t } = useTranslation();
   const [session, setSession] = useState(undefined);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => setSession(data.session));
@@ -27,6 +29,11 @@ const ProtectedRoute = () => {
 
   if (!session) {
     return <Navigate to="/clients" replace />;
+  }
+
+  // Radio-only accounts can reach the selector and nothing else in the portal.
+  if (isRadioOnly(session) && pathname !== "/clients/select") {
+    return <Navigate to="/clients/select" replace />;
   }
 
   return <Outlet context={{ session }} />;

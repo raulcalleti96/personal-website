@@ -12,6 +12,8 @@ const Empire = () => {
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [checkingSession, setCheckingSession] = useState(true);
 
   const toggleLanguage = () => {
@@ -32,7 +34,7 @@ const Empire = () => {
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session) {
-        navigate("/clients/home", { replace: true });
+        navigate("/clients/select", { replace: true });
       } else {
         setCheckingSession(false);
       }
@@ -42,7 +44,7 @@ const Empire = () => {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
       if (session) {
-        navigate("/clients/home", { replace: true });
+        navigate("/clients/select", { replace: true });
       }
     });
 
@@ -54,13 +56,28 @@ const Empire = () => {
     setLoading(true);
     const { error: signInError } = await supabase.auth.signInWithOAuth({
       provider: "google",
-      options: { redirectTo: `${window.location.origin}/clients/home` },
+      options: { redirectTo: `${window.location.origin}/clients/select` },
     });
     if (signInError) {
       setError(signInError.message);
       setLoading(false);
     }
   };
+
+  const handleEmailLogin = async (e) => {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+    const { error: signInError } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
+    if (signInError) {
+      setError(signInError.status === 400 ? t("empire.form.invalid") : signInError.message);
+      setLoading(false);
+    }
+    // On success onAuthStateChange redirects to /clients/select.
+  };
+
+  const inputClass =
+    "w-full px-4 py-3 rounded-lg bg-[#0f0f10] border border-white/10 text-white placeholder:text-gray-500 outline-none focus:border-naranja-vibrante transition";
 
   return (
     <section
@@ -125,6 +142,44 @@ const Empire = () => {
             <FcGoogle size={20} />
             {loading ? t("empire.form.loggingIn") : t("empire.form.googleLogin")}
           </button>
+
+          <div className="flex items-center gap-3 my-5 text-xs uppercase tracking-[0.2em] text-gray-500">
+            <span className="flex-1 h-px bg-white/10" />
+            {t("empire.form.or")}
+            <span className="flex-1 h-px bg-white/10" />
+          </div>
+
+          <form onSubmit={handleEmailLogin} className="flex flex-col gap-3 text-left">
+            <input
+              id="empire-email"
+              type="email"
+              autoComplete="username"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder={t("empire.form.email")}
+              aria-label={t("empire.form.email")}
+              className={inputClass}
+            />
+            <input
+              id="empire-password"
+              type="password"
+              autoComplete="current-password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder={t("empire.form.password")}
+              aria-label={t("empire.form.password")}
+              className={inputClass}
+            />
+            <button
+              type="submit"
+              disabled={loading || checkingSession}
+              className="w-full px-4 py-3 rounded-lg bg-naranja-vibrante text-black font-semibold hover:brightness-110 transition disabled:opacity-60"
+            >
+              {loading ? t("empire.form.loggingIn") : t("empire.form.emailLogin")}
+            </button>
+          </form>
 
           <a
             href="/#home"

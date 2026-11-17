@@ -1,12 +1,54 @@
 {
   "home": {
     "title": "Raúl Santiago",
-    "subtitle": "Analista de Datos | Entusiasta de IA y Negocios",
-    "buttons": {
-      "cv": "Descargar CV",
-      "blog": "Blog",
-      "projects": "Proyectos",
-      "contact": "Contacto"
+    "hero": {
+      "role": "Data Engineer · Team Lead",
+      "name": "Raúl Santiago",
+      "tagline": "Convierto datos en decisiones que hacen avanzar a los equipos.",
+      "cta": "Hablemos"
+    },
+    "proof": {
+      "label": "En cifras",
+      "stats": {
+        "years": {
+          "value": "5+",
+          "label": "Años de experiencia"
+        },
+        "projects": {
+          "value": "10+",
+          "label": "Proyectos completados"
+        },
+        "location": {
+          "value": "Zamora",
+          "label": "España"
+        }
+      },
+      "blurb": "Como Data Engineer Senior en Devoteam, diseño y mantengo pipelines de datos en Google Cloud Platform, ayudando a los equipos a convertir datos en bruto en decisiones en las que pueden confiar.",
+      "cta": "Hablemos"
+    },
+    "scroll": "Scroll",
+    "now": {
+      "label": "Ahora",
+      "building": {
+        "label": "Construyendo",
+        "title": "Hermandad 2.0",
+        "subtitle": "En desarrollo"
+      },
+      "reading": {
+        "label": "Leyendo",
+        "title": "Pensar rápido, pensar despacio",
+        "subtitle": "Daniel Kahneman"
+      },
+      "listening": {
+        "label": "Escuchando",
+        "title": "23",
+        "subtitle": "Sam Hunt"
+      },
+      "watching": {
+        "label": "Viendo",
+        "title": "How I Met Your Mother",
+        "subtitle": "Serie"
+      }
     },
     "greeting": {
       "morning": "Buenos días 🌇",
@@ -23,55 +65,129 @@
       "easter": "¡Feliz Pascua! 🐣"
     }
   },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "articles": "Artículos",
+    "contact": "Contacto",
+    "radio": "Navidudu"
+  },
   "about": {
     "title": "Sobre mí",
-    "description": "🚀 Raúl Santiago Prieto 🚀✨ Soy un Analista de Datos en Elastic y anteriormente en Banco Santander, con experiencia en ingeniería de software y automatización. También fui árbitro de fútbol en la RFEF. Apasionado por la exploración, la tecnología y la innovación, transformo datos en decisiones. ¡Conectemos y creemos el futuro juntos!",
+    "sectionLabel": "Sobre mí",
+    "mission": {
+      "p1": "Construyo los dashboards y pipelines de los que la gente depende para entender sus datos: pipelines en BigQuery en Devoteam, modelos y reportes en DBT en Elastic, y Empire, una plataforma de análisis de datos que construí para clientes de deporte y negocio después de usarla para analizar mis propios partidos de tenis. Me importa la consulta detrás del gráfico tanto como el gráfico en sí.",
+      "p2": "Tengo cinco años de experiencia en ingeniería de datos en producción, los últimos como GCP Data Engineer en Devoteam. Fuera de ese rol, construyo y lanzo mis propios productos, incluyendo RSNexTech, mi plataforma personal, y Empire, que empezó como una forma de seguir mis propios resultados de tenis.",
+      "p3": "Doy lo mejor de mí cuando me toca ocuparme del término medio desordenado: escribir la especificación, dar forma al pipeline, y seguir cuidando el informe que un stakeholder realmente lee. Hoy eso incluye las herramientas de IA que uso a diario — uso Claude Code y Gemini, y conecto lo que producen con el mismo flujo de Git y Jira sobre el que he escrito, para que nada salga a producción sin revisión."
+    },
+    "toolkit": {
+      "label": "Caja de herramientas técnica",
+      "headline": "La base técnica detrás de todo."
+    },
+    "moreLabel": "Más sobre mí",
+    "vitals": {
+      "label": "Ficha",
+      "current": "Actualmente",
+      "previous": "Anteriormente",
+      "location": "Ubicado en",
+      "locationValue": "Zamora, España",
+      "openTo": "Abierto a",
+      "openToValue": "Team Lead, Product Management"
+    },
+    "timeline": {
+      "label": "A través de los años"
+    },
     "nav": {
-    "experience": "💼 Experiencia",
-    "education": "📚 Educación",
-    "technologies": "🧑🏻‍💻 Tecnologías",
-    "certifications": "🎓 Certificaciones",
-    "hobbies": "🎻 Hobbies",
-    "strengths_weaknesses": "⚖️ Fortalezas & Debilidades",
-    "cv": "📄 CV"
+      "experience": "Experiencia",
+      "education": "Educación",
+      "technologies": "Tecnologías",
+      "certifications": "Certificaciones",
+      "hobbies": "Hobbies",
+      "strengths_weaknesses": "Fortalezas y Debilidades",
+      "cv": "CV"
     },
     "cv": {
-    "title": "Mi CV",
-    "description": "Aquí puedes descargar la última versión de mi currículum en formato PDF.",
-    "download": "Descargar CV"
-  },
+      "title": "Mi CV",
+      "description": "Aquí puedes descargar la última versión de mi currículum en formato PDF.",
+      "download": "Descargar CV"
+    },
     "experience": [
+      {
+        "company": "Devoteam",
+        "position": "GCP Data Engineer",
+        "years": "10/2025 - Actualidad",
+        "location": "Remoto",
+        "description": "Ingeniería de datos sobre Google Cloud Platform: diseño y mantenimiento de pipelines de datos en la nube.",
+        "skills": [
+          "GCP",
+          "BigQuery",
+          "SQL",
+          "Python",
+          "ETL"
+        ]
+      },
+      {
+        "company": "SOLTEL Group",
+        "position": "Data Engineer",
+        "years": "05/2025 - 10/2025",
+        "location": "Remoto",
+        "description": "Análisis y modelado de datos para casos de negocio. Desarrollo de dashboards y automatizaciones (SQL, Python, DBT/ETL, BigQuery/Looker).",
+        "skills": [
+          "SQL",
+          "Python",
+          "ETL",
+          "DBT",
+          "BigQuery",
+          "Looker Studio",
+          "Automatización"
+        ]
+      },
       {
         "company": "Elastic",
         "position": "Data Analyst",
-        "years": "2024 - Actualidad",
-        "location": "Zamora - USA (Remoto mundial)",
-        "description": "En el equipo de Observability, trabajo con modelos de DBT y creación de reportes. Uso herramientas como DBT, ETL, SQL, Python, Elasticsearch, Pipelines (Buolkite), Looker Studio y BigQuery.",
-        "skills": ["DBT", "ETL", "SQL", "Python", "Elasticsearch", "BigQuery", "Looker Studio"]
+        "years": "07/2024 - 07/2025",
+        "location": "España",
+        "description": "En el equipo de Observability, trabajé con modelos de DBT y creación de reportes. Usé DBT, ETL, SQL, Python, Elasticsearch, Pipelines (Buildkite), Looker Studio y BigQuery.",
+        "skills": [
+          "DBT",
+          "ETL",
+          "SQL",
+          "Python",
+          "Elasticsearch",
+          "BigQuery",
+          "Looker Studio"
+        ]
       },
       {
-        "company": "Banco Santander Digital Services",
-        "position": "Software Engineering Analyst",
-        "years": "2022 - 2024",
-        "location": "Madrid y Zamora (Híbrido)",
-        "description": "Analista de software (Java, Python, SQL, COBOL-JCL), responsable de OCR, análisis de incidentes y BI Analyst (SQL, NoSQL, Java, Python, PowerBI).",
-        "skills": ["SQL", "NoSQL", "Java", "Python", "PowerBI", "OCR", "BI"]
+        "company": "Santander Global T&O",
+        "position": "Software Engineering Jr. Analyst",
+        "years": "02/2022 - 07/2024",
+        "location": "Madrid, España",
+        "description": "Analista de ingeniería de software: análisis OCR, análisis de incidentes y desarrollo de dashboards en Power BI.",
+        "skills": [
+          "SQL",
+          "Java",
+          "Python",
+          "Power BI",
+          "OCR",
+          "Análisis de incidentes"
+        ]
       },
       {
         "company": "NTT DATA",
-        "position": "RPA-OCR Software Developer",
-        "years": "2021 - 2022",
-        "location": "Zamora y Bilbao (Remoto)",
-        "description": "Desarrollador de automatizaciones en el equipo de OCR para escaneo automatizado de documentos (ABBY, Eclipse) y RPA (Blue Prism, UiPath).",
-        "skills": ["SQL", "Java", "Python", "Atlassian"]
-      },
-      {
-        "company": "Real Federación Española de Fútbol",
-        "position": "Árbitro de fútbol",
-        "years": "2016 - 2023",
-        "location": "Zamora y Bilbao (Presencial)",
-        "description": "Árbitro talento del Centro Tecnológico Arbitral (2017-2019). Actué en Preferente, 2ªB, 3ª división, 2ª Nacional Femenina y Liga Nacional Juvenil.",
-        "skills": ["Resolución de problemas", "Comunicación", "Decisiones bajo presión", "Gestión del estrés", "Lógica", "Razonamiento", "Liderazgo"]
+        "position": "RPA Software Developer",
+        "years": "03/2021 - 02/2022",
+        "location": "Salamanca, España",
+        "description": "Desarrollador de automatizaciones RPA (Blue Prism, UiPath) para el escaneo automatizado de documentos.",
+        "skills": [
+          "RPA",
+          "Blue Prism",
+          "UiPath",
+          "SQL",
+          "Java",
+          "Python"
+        ]
       }
     ],
     "education": [
@@ -107,29 +223,64 @@
       }
     ],
     "certifications": [
-      { "title": "Fundamentos de la gestión de proyectos", "issuer": "LinkedIn" },
-      { "title": "Aprende Big Data: Análisis de datos", "issuer": "LinkedIn" },
-      { "title": "Fundamentos de Big Data", "issuer": "LinkedIn" },
-      { "title": "Gestión del cambio", "issuer": "LinkedIn" },
-      { "title": "Software Testing: Tools", "issuer": "LinkedIn" },
-      { "title": "Test Automation Foundations", "issuer": "LinkedIn" },
-      { "title": "Curso de Python 3", "issuer": "OpenWebinars" },
-      { "title": "Carnet de conducir B", "issuer": "DGT" }
+      {
+        "title": "Fundamentos de la gestión de proyectos",
+        "issuer": "LinkedIn"
+      },
+      {
+        "title": "Aprende Big Data: Análisis de datos",
+        "issuer": "LinkedIn"
+      },
+      {
+        "title": "Fundamentos de Big Data",
+        "issuer": "LinkedIn"
+      },
+      {
+        "title": "Gestión del cambio",
+        "issuer": "LinkedIn"
+      },
+      {
+        "title": "Software Testing: Tools",
+        "issuer": "LinkedIn"
+      },
+      {
+        "title": "Test Automation Foundations",
+        "issuer": "LinkedIn"
+      },
+      {
+        "title": "Curso de Python 3",
+        "issuer": "OpenWebinars"
+      },
+      {
+        "title": "Carnet de conducir B",
+        "issuer": "DGT"
+      }
     ],
     "hobbies": {
       "tennis": {
-        "title": "🎾 Tenis",
+        "title": "Tenis",
         "description": "Compito en el ITF World Tour. Consulta mi perfil abajo."
       },
+      "music": {
+        "title": "Música",
+        "wherePlayed": "Dónde he tocado"
+      },
+      "basketball": {
+        "title": "Árbitro de baloncesto",
+        "description": "Arbitro baloncesto para la Federación Española de Baloncesto (FEB).",
+        "linkLabel": "Federación Española de Baloncesto (FEB)"
+      },
       "violin": {
-        "title": "🎻 Violín",
+        "title": "Violín",
         "education": "Conservatorio Miguel Manzano (Zamora)",
-        "wherePlayed": "Orquesta del Conservatorio (Concertino) (2021 - Actualidad)"
+        "wherePlayed": [
+          "Orquesta del Conservatorio (Concertino) (2021 - Actualidad)",
+          "Joven Orquesta de Valladolid (2022 - Actualidad)"
+        ]
       },
       "percussion": {
         "title": "🥁 Percusión",
         "wherePlayed": [
-          "Joven Orquesta Sinfónica de Valladolid (2022)",
           "Banda de la Cofradía de Nuestra Madre de Zamora (2022 - Actualidad)"
         ]
       },
@@ -154,34 +305,34 @@
           "Crecimiento Personal"
         ]
       },
-  "travels": {
-    "title": "✈️ Países visitados",
-    "listTitle": "🌍 Lista de Países",
-    "countries": {
-      "United States": "Estados Unidos",
-      "United Kingdom": "Reino Unido",
-      "Ireland": "Irlanda",
-      "Portugal": "Portugal",
-      "Spain": "España",
-      "France": "Francia",
-      "Germany": "Alemania",
-      "Switzerland": "Suiza",
-      "Italy": "Italia",
-      "Greece": "Grecia",
-      "Croatia": "Croacia",
-      "Monaco": "Mónaco",
-      "Vatican City": "Ciudad del Vaticano",
-      "Poland": "Polonia",
-      "Slovenia": "Eslovenia",
-      "Slovakia": "Eslovaquia",
-      "Austria": "Austria",
-      "Tunisia": "Túnez",
-      "Turkey": "Turquía",
-      "Russia": "Rusia",
-      "Andorra": "Andorra",
-      "Czech Republic": "República Checa"
-    }
-  }
+      "travels": {
+        "title": "✈️ Países visitados",
+        "listTitle": "🌍 Lista de Países",
+        "countries": {
+          "United States": "Estados Unidos",
+          "United Kingdom": "Reino Unido",
+          "Ireland": "Irlanda",
+          "Portugal": "Portugal",
+          "Spain": "España",
+          "France": "Francia",
+          "Germany": "Alemania",
+          "Switzerland": "Suiza",
+          "Italy": "Italia",
+          "Greece": "Grecia",
+          "Croatia": "Croacia",
+          "Monaco": "Mónaco",
+          "Vatican City": "Ciudad del Vaticano",
+          "Poland": "Polonia",
+          "Slovenia": "Eslovenia",
+          "Slovakia": "Eslovaquia",
+          "Austria": "Austria",
+          "Tunisia": "Túnez",
+          "Turkey": "Turquía",
+          "Russia": "Rusia",
+          "Andorra": "Andorra",
+          "Czech Republic": "República Checa"
+        }
+      }
     },
     "strengthsWeaknesses": {
       "strengths": {
@@ -207,198 +358,422 @@
     }
   },
   "projects": {
-      "title": "🛠 Proyectos",
-      "all": "Todos",
-      "readme": "Ver README",
-      "github": "🔗 Ver en GitHub"
-    },
-    "articles": {
-      "title": "📝 Últimos Artículos",
-      "readMedium": "Leer en Medium",
-      "readSubstack": "Leer en Substack"
-    },
-    "contact": {
-      "title": "📩 Contacta Conmigo",
-      "description": "Si tienes una pregunta, una idea de proyecto o simplemente quieres saludar, ¡no dudes en escribirme!",
-      "name": "Tu Nombre",
-      "email": "Tu Correo",
-      "message": "Tu Mensaje",
-      "send": "🚀 Enviar Mensaje",
-      "social": {
-        "email": "Correo",
-        "linkedin": "LinkedIn",
-        "github": "GitHub",
-        "medium": "Medium"
+    "sectionLabel": "Trabajo seleccionado",
+    "title": "Proyectos",
+    "headline": "Seis productos, todos míos, en distintas fases.",
+    "intro": "Herramientas personales y plataformas de cliente que diseño y construyo de principio a fin, desde el primer boceto hasta producción.",
+    "contentsLabel": "Índice",
+    "plateLabel": "Lámina",
+    "roleLabel": "Rol",
+    "periodLabel": "Periodo",
+    "statusLabel": "Estado",
+    "viewLive": "Visitar web",
+    "viewGithub": "Ver en GitHub",
+    "comingSoon": "Próximamente",
+    "items": [
+      {
+        "plate": "B.01",
+        "category": "Web personal",
+        "status": "En actualización a V2",
+        "title": "RSNexTech",
+        "role": "Desarrollador Full-Stack · Solo",
+        "period": "V1 2024 — V2 2026",
+        "contentsTagline": "PORTAFOLIO PERSONAL Y PUNTO DE ENTRADA A TODO LO DEMÁS",
+        "quote": "Portafolio personal, donde mi carrera laboral tomó un inicio.",
+        "quoteAuthor": "",
+        "description": "RSNexTech es la web personal para mostrar mis trabajos y mi CV en un solo lugar. Accesible e intuitiva para conocerme, saber sobre mis proyectos y mi carrera laboral, entrar a mis productos y contactarme.",
+        "tech": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React",
+          "Firebase Hosting",
+          "Firestore",
+          "Cloud Functions",
+          "GitHub API",
+          "Google AdSense",
+          "Medium API"
+        ],
+        "linkLabel": "RSNEXTECH.COM",
+        "linkUrl": "https://rsnextech.com",
+        "linkNote": "Dominio en renovación",
+        "github": "https://github.com/raulcalleti96/personal-website"
       },
-      "status": {
-        "success": "✅ ¡Mensaje enviado correctamente!",
-        "error": "❌ Error al enviar el mensaje. Intenta de nuevo.",
-        "loading": "Enviando..."
+      {
+        "plate": "B.02",
+        "category": "Plataforma de servicios",
+        "status": "En actualización a V2",
+        "title": "Empire Platform",
+        "role": "Desarrollador Full-Stack · Solo",
+        "period": "V1 2024 — V2 2026",
+        "contentsTagline": "LA PASARELA CENTRAL A CADA SERVICIO QUE CONSTRUYO",
+        "quote": "The Empire State Building is the closest thing to heaven in this city.",
+        "quoteAuthor": "Deborah Kerr",
+        "description": "Empire Platform es la plataforma de servicios a clientes: un punto de conexión centralizado a cada servicio que desarrollo, sin que el cliente tenga que asumir un dominio propio ni gestionar errores por separado.",
+        "tech": [
+          "React",
+          "React Router",
+          "Supabase (Auth, Postgres, Edge Functions)",
+          "Tailwind CSS",
+          "Framer Motion"
+        ],
+        "linkLabel": "RSNEXTECH.COM/EMPIRE",
+        "linkUrl": "https://rsnextech.com/empire",
+        "linkNote": "Dominio en renovación",
+        "github": "https://github.com/raulcalleti96/personal-website"
+      },
+      {
+        "plate": "B.03",
+        "category": "Web institucional",
+        "status": "En producción · V2 en curso (2027)",
+        "title": "Espíritu Santo Zamora",
+        "role": "Desarrollador Full-Stack",
+        "period": "V1 2026 — V2 2027",
+        "contentsTagline": "INFORMACIÓN Y GESTIÓN PARA LA HERMANDAD, EN UNA IMAGEN NUEVA",
+        "quote": "La página web institucional de la Hermandad de Semana Santa de Zamora.",
+        "quoteAuthor": "",
+        "description": "La página web oficial de la Hermandad del Santísimo Cristo del Espíritu Santo de Zamora es ya, tras dos décadas, un centro de información y gestión de la Hermandad. Con conexiones a bases de datos y envío de formularios de registro, da una modernización a la entidad y una nueva imagen. La V2 ya está en marcha para 2027.",
+        "tech": [
+          "TSX",
+          "TypeScript",
+          "PL/pgSQL",
+          "Python",
+          "CSS"
+        ],
+        "linkLabel": "ESPIRITUSANTOZAMORA.ORG",
+        "linkUrl": "https://espiritusantozamora.org",
+        "linkNote": "",
+        "github": ""
+      },
+      {
+        "plate": "B.04",
+        "category": "Web de gestión institucional",
+        "status": "En producción · V2 en curso (2027)",
+        "title": "Gestión ESZ 2.0",
+        "role": "Desarrollador Full-Stack",
+        "period": "V1 2026 — V2 2027",
+        "contentsTagline": "LA TRASTIENDA QUE AGILIZA LA GESTIÓN DE LA HERMANDAD",
+        "quote": "La página web de gestión institucional de la Hermandad de Semana Santa de Zamora.",
+        "quoteAuthor": "",
+        "description": "Junto con la web institucional, una plataforma para gestionar la Hermandad: base de datos de hermanos, correspondencia, tesorería, informes y analítica. Una app funcional, ya operativa, que agiliza los procesos de gestión del día a día.",
+        "tech": [
+          "TSX",
+          "TypeScript",
+          "PL/pgSQL",
+          "Python",
+          "CSS"
+        ],
+        "linkLabel": "GESTION.ESPIRITUSANTOZAMORA.ORG",
+        "linkUrl": "https://gestion.espiritusantozamora.org",
+        "linkNote": "",
+        "github": ""
+      },
+      {
+        "plate": "B.05",
+        "category": "Web institucional",
+        "status": "En desarrollo · Lanzamiento pendiente (2027)",
+        "title": "Web 7 Palabras",
+        "role": "Desarrollador Full-Stack",
+        "period": "V1 2027",
+        "contentsTagline": "OTRA HERMANDAD, UNA PRESENCIA RENOVADA EN INTERNET",
+        "quote": "La cara pública de una hermandad, reconstruida para la web.",
+        "quoteAuthor": "",
+        "description": "Construida sobre las mismas bases que la web del Espíritu Santo pero adaptada a la identidad de la hermandad de las Siete Palabras: noticias, actividades e inscripciones en un único sitio, respaldado por una base de datos para publicar y atender a los hermanos sin depender de terceros.",
+        "tech": [
+          "TSX",
+          "TypeScript",
+          "PL/pgSQL",
+          "Python",
+          "CSS"
+        ],
+        "linkLabel": "7PALABRASZAMORA.ES",
+        "linkUrl": "https://7palabraszamora.es",
+        "linkNote": "Lanzamiento en 2027",
+        "github": ""
+      },
+      {
+        "plate": "B.06",
+        "category": "Web de gestión institucional",
+        "status": "En desarrollo · Lanzamiento pendiente (2027)",
+        "title": "Gestión 7 Palabras",
+        "role": "Desarrollador Full-Stack",
+        "period": "V1 2027",
+        "contentsTagline": "GESTIÓN DE HERMANOS Y DATOS LIMPIOS PARA LAS SIETE PALABRAS",
+        "quote": "La trastienda de gestión de la hermandad, con sus datos en orden.",
+        "quoteAuthor": "",
+        "description": "La contraparte de gestión de la web de las Siete Palabras: ficha de hermanos, correspondencia, tesorería e informes. Añade una capa de limpieza de datos que unifica y depura los registros históricos de la hermandad, para que todo lo que muestra la plataforma sea fiable.",
+        "tech": [
+          "TSX",
+          "TypeScript",
+          "PL/pgSQL",
+          "Python",
+          "CSS",
+          "Limpieza de datos"
+        ],
+        "linkLabel": "GESTION.7PALABRASZAMORA.ES",
+        "linkUrl": "https://gestion.7palabraszamora.es",
+        "linkNote": "Lanzamiento en 2027",
+        "github": ""
+      }
+    ]
+  },
+  "articles": {
+    "sectionLabel": "Artículos",
+    "title": "Últimos Artículos",
+    "readOn": "Leer en LinkedIn",
+    "items": [
+      {
+        "title": "Empire Workspace: un hub digital de análisis de datos",
+        "date": "Septiembre 2025",
+        "summary": "Cómo Empire pasó de analizar mis propios partidos de tenis a convertirse en una plataforma de análisis de datos para clientes de deporte y negocio, construida con React, Firebase y Tableau."
+      },
+      {
+        "title": "El trío del desarrollo: integrando Gemini AI con Git y Jira",
+        "date": "Diciembre 2025",
+        "summary": "Cómo Gemini AI automatiza historias de usuario en Jira, revisa código en Git y redacta mensajes de commit — un flujo de trabajo aumentado por IA que acelera la entrega de principio a fin."
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Contacto",
+    "title": "Contacta Conmigo",
+    "description": "Si tienes una pregunta, una idea de proyecto o simplemente quieres saludar, no dudes en escribirme.",
+    "name": "Tu Nombre",
+    "email": "Tu Correo",
+    "message": "Tu Mensaje",
+    "send": "Enviar Mensaje",
+    "social": {
+      "email": "Correo",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "status": {
+      "success": "Mensaje enviado correctamente.",
+      "error": "Error al enviar el mensaje. Intenta de nuevo.",
+      "loading": "Enviando..."
+    }
+  },
+  "empire": {
+    "title": "EMPIRE Access",
+    "quote": "El Empire State Building es lo más parecido al cielo en esta ciudad.",
+    "quoteAuthor": "Deborah Kerr",
+    "form": {
+      "googleLogin": "Continuar con Google",
+      "loggingIn": "Entrando...",
+      "home": "Inicio",
+      "or": "o",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "emailLogin": "Entrar con correo",
+      "invalid": "Correo o contraseña incorrectos."
+    }
+  },
+  "portal": {
+    "loading": "Cargando...",
+    "nav": {
+      "home": "Inicio",
+      "tasks": "Tareas",
+      "habits": "Hábitos",
+      "finances": "Finanzas",
+      "calendar": "Calendario",
+      "brain": "Brain",
+      "diario": "Diario",
+      "logout": "Cerrar sesión",
+      "switchApp": "Cambiar de app"
+    },
+    "select": {
+      "greeting": "Bienvenido de nuevo, {{name}}",
+      "title": "¿Qué espacio quieres abrir?",
+      "management": {
+        "title": "Empire-Gestión",
+        "description": "Tareas, hábitos, finanzas, calendario, Brain y diario — tu panel de gestión del día a día."
+      },
+      "focus": {
+        "title": "Empire-Focus",
+        "description": "Un reloj, la hora de Nueva York y un temporizador Pomodoro para proteger tu concentración."
+      },
+      "radio": {
+        "title": "Empire-Radio",
+        "description": "El disco de Navidad Feliz Navidudu: nueve canciones y una carta."
       }
     },
-    "empire": {
-      "title": "EMPIRE Access",
-      "quote": "El Empire State Building es lo más parecido al cielo en esta ciudad.",
-      "quoteAuthor": "Deborah Kerr",
-      "form": {
-        "googleLogin": "Continuar con Google",
-        "loggingIn": "Entrando...",
-        "home": "Inicio"
+    "focus": {
+      "back": "Volver",
+      "newYork": "Nueva York",
+      "pomodoro": {
+        "work": "Foco",
+        "break": "Descanso",
+        "start": "Iniciar",
+        "pause": "Pausar",
+        "reset": "Reiniciar",
+        "completed": "{{count}} pomodoros completados",
+        "workDoneLabel": "Bloque de foco completado",
+        "breakDoneLabel": "Descanso terminado",
+        "confirmBreak": "¿Empezamos el descanso de {{minutes}} min?",
+        "confirmWork": "¿Empezamos el siguiente foco de {{minutes}} min?",
+        "startBreak": "Empezar descanso",
+        "startWork": "Empezar foco"
+      },
+      "spotify": {
+        "connect": "Conectar Spotify",
+        "disconnect": "Desconectar",
+        "nothingPlaying": "Nada sonando"
+      },
+      "history": {
+        "title": "Informe",
+        "today": "Hoy",
+        "week": "Esta semana",
+        "total": "Total",
+        "sessions": "{{count}} sesiones",
+        "minutes": "{{minutes}} min"
       }
     },
-    "portal": {
-      "loading": "Cargando...",
-      "nav": {
-        "home": "Inicio",
+    "home": {
+      "comingSoon": "Próximamente.",
+      "viewAll": "Ver todas",
+      "viewCalendar": "Ver calendario",
+      "tasksEmpty": "No hay tareas pendientes ahora mismo.",
+      "habitsEmpty": "Todavía no tienes hábitos.",
+      "financesWidget": {
+        "thisMonth": "gastado este mes"
+      },
+      "sections": {
+        "finances": "Finanzas",
         "tasks": "Tareas",
         "habits": "Hábitos",
-        "finances": "Finanzas",
         "calendar": "Calendario",
-        "brain": "Brain",
-        "diario": "Diario",
-        "logout": "Cerrar sesión"
+        "goals": "Objetivos"
+      }
+    },
+    "tasks": {
+      "pending": "Pendientes",
+      "completed": "Completadas",
+      "empty": "No tienes tareas pendientes.",
+      "delete": "Eliminar",
+      "form": {
+        "titleLabel": "Título",
+        "descriptionLabel": "Descripción",
+        "categoryLabel": "Categoría",
+        "dueTypeLabel": "Fecha límite",
+        "add": "Añadir tarea"
       },
-      "home": {
-        "comingSoon": "Próximamente.",
-        "viewAll": "Ver todas",
-        "viewCalendar": "Ver calendario",
-        "tasksEmpty": "No hay tareas pendientes ahora mismo.",
-        "habitsEmpty": "Todavía no tienes hábitos.",
-        "financesWidget": {
-          "thisMonth": "gastado este mes"
-        },
-        "sections": {
-          "finances": "Finanzas",
-          "tasks": "Tareas",
-          "habits": "Hábitos",
-          "calendar": "Calendario",
-          "goals": "Objetivos"
-        }
+      "categories": {
+        "personal": "Personal",
+        "deporte": "Deporte",
+        "casa": "Casa",
+        "finanzas": "Finanzas",
+        "violin": "Violín",
+        "trabajo": "Trabajo"
       },
-      "tasks": {
-        "pending": "Pendientes",
-        "completed": "Completadas",
-        "empty": "No tienes tareas pendientes.",
-        "delete": "Eliminar",
-        "form": {
-          "titleLabel": "Título",
-          "descriptionLabel": "Descripción",
-          "categoryLabel": "Categoría",
-          "dueTypeLabel": "Fecha límite",
-          "add": "Añadir tarea"
-        },
-        "categories": {
-          "personal": "Personal",
-          "deporte": "Deporte",
-          "casa": "Casa",
-          "finanzas": "Finanzas",
-          "violin": "Violín",
-          "trabajo": "Trabajo"
-        },
-        "dueTypes": {
-          "none": "Sin fecha límite",
-          "day": "Día concreto",
-          "month": "Este mes",
-          "year": "Este año"
-        }
+      "dueTypes": {
+        "none": "Sin fecha límite",
+        "day": "Día concreto",
+        "month": "Este mes",
+        "year": "Este año"
+      }
+    },
+    "habits": {
+      "empty": "Todavía no tienes hábitos.",
+      "streak": "Racha: {{count}}",
+      "target": "Objetivo: {{count}}",
+      "delete": "Eliminar",
+      "form": {
+        "titleLabel": "Título",
+        "frequencyLabel": "Frecuencia",
+        "targetLabel": "Racha objetivo",
+        "add": "Añadir hábito"
       },
-      "habits": {
-        "empty": "Todavía no tienes hábitos.",
-        "streak": "Racha: {{count}}",
-        "target": "Objetivo: {{count}}",
-        "delete": "Eliminar",
-        "form": {
-          "titleLabel": "Título",
-          "frequencyLabel": "Frecuencia",
-          "targetLabel": "Racha objetivo",
-          "add": "Añadir hábito"
-        },
-        "frequencies": {
-          "daily": "Diario",
-          "weekly": "Semanal",
-          "monthly": "Mensual",
-          "yearly": "Anual"
-        }
+      "frequencies": {
+        "daily": "Diario",
+        "weekly": "Semanal",
+        "monthly": "Mensual",
+        "yearly": "Anual"
+      }
+    },
+    "finances": {
+      "empty": "Todavía no tienes cuentas.",
+      "back": "Volver a cuentas",
+      "notFound": "Cuenta no encontrada.",
+      "noTransactions": "Todavía no hay movimientos.",
+      "types": {
+        "income": "Ingreso",
+        "expense": "Gasto"
       },
-      "finances": {
-        "empty": "Todavía no tienes cuentas.",
-        "back": "Volver a cuentas",
-        "notFound": "Cuenta no encontrada.",
-        "noTransactions": "Todavía no hay movimientos.",
-        "types": {
-          "income": "Ingreso",
-          "expense": "Gasto"
-        },
-        "form": {
-          "nameLabel": "Nombre de la cuenta",
-          "add": "Añadir cuenta",
-          "shareWith": "Compartir con {{name}}",
-          "unshare": "Dejar de compartir",
-          "amountLabel": "Importe",
-          "categoryLabel": "Categoría",
-          "noCategory": "Sin categoría",
-          "dateLabel": "Fecha",
-          "newCategoryPlaceholder": "Nombre de nueva categoría",
-          "addCategory": "Añadir categoría",
-          "descriptionLabel": "Descripción",
-          "addTransaction": "Añadir movimiento"
-        },
-        "tabs": {
-          "transactions": "Movimientos",
-          "recurring": "Recurrentes",
-          "budget": "Presupuesto"
-        },
-        "recurring": {
-          "dayOfMonth": "Día del mes",
-          "add": "Añadir pago recurrente",
-          "empty": "Todavía no hay pagos recurrentes.",
-          "everyMonthOn": "Cada mes el día {{day}}",
-          "logThisMonth": "Registrar este mes",
-          "logged": "Registrado"
-        },
-        "budget": {
-          "plannedAmount": "Importe previsto",
-          "addLine": "Añadir línea de presupuesto",
-          "empty": "No hay líneas de presupuesto para este mes.",
-          "actual": "Real",
-          "diff": "Diferencia",
-          "total": "Total"
-        }
+      "form": {
+        "nameLabel": "Nombre de la cuenta",
+        "add": "Añadir cuenta",
+        "shareWith": "Compartir con {{name}}",
+        "unshare": "Dejar de compartir",
+        "amountLabel": "Importe",
+        "categoryLabel": "Categoría",
+        "noCategory": "Sin categoría",
+        "dateLabel": "Fecha",
+        "newCategoryPlaceholder": "Nombre de nueva categoría",
+        "addCategory": "Añadir categoría",
+        "descriptionLabel": "Descripción",
+        "addTransaction": "Añadir movimiento"
       },
-      "calendar": {
-        "note": "Tu Google Calendar, incrustado. Si lo ves vacío, comprueba que tienes sesión iniciada en Google en este navegador.",
-        "manageCalendars": "Gestionar calendarios",
-        "howToFindId": "Por defecto solo se muestra tu calendario principal. Para añadir otro (secundario o compartido): abre Google Calendar → Configuración → elige el calendario → Integrar calendario → copia su ID de calendario y pégalo abajo.",
-        "idPlaceholder": "ID de calendario (ej. abc123@group.calendar.google.com)",
-        "addCalendar": "Añadir",
-        "primary": "Principal"
+      "tabs": {
+        "transactions": "Movimientos",
+        "recurring": "Recurrentes",
+        "budget": "Presupuesto"
       },
-      "brain": {
-        "connected": "Telegram conectado (Chat ID {{chatId}})",
-        "disconnect": "Desconectar",
-        "howToConnect": "Envía un mensaje a tu bot en Telegram — te responderá con tu Chat ID.",
-        "pasteChatId": "Pega ese Chat ID abajo para conectarlo a tu cuenta.",
-        "chatIdPlaceholder": "Chat ID",
-        "connect": "Conectar",
-        "notePlaceholder": "Anota algo...",
-        "addNote": "Añadir",
-        "empty": "Aquí aparecerán las ideas que captures desde Telegram."
+      "recurring": {
+        "dayOfMonth": "Día del mes",
+        "add": "Añadir pago recurrente",
+        "empty": "Todavía no hay pagos recurrentes.",
+        "everyMonthOn": "Cada mes el día {{day}}",
+        "logThisMonth": "Registrar este mes",
+        "logged": "Registrado"
       },
-      "diario": {
-        "checkin": {
-          "title": "¿Qué tal ayer?",
-          "subtitle": "Un check-in diario rápido — menos de un minuto.",
-          "moodLabel": "¿Cómo te sientes hoy?",
-          "bestLabel": "Lo mejor de ayer",
-          "improveLabel": "¿Qué mejorarías de ayer?",
-          "ratingLabel": "Valora el día de ayer",
-          "save": "Guardar",
-          "skip": "Saltar por hoy"
-        },
-        "entries": {
-          "empty": "Aquí se irán acumulando las entradas de tu diario.",
-          "yesterdayRating": "Ayer valorado con {{rating}}/5"
-        }
+      "budget": {
+        "plannedAmount": "Importe previsto",
+        "addLine": "Añadir línea de presupuesto",
+        "empty": "No hay líneas de presupuesto para este mes.",
+        "actual": "Real",
+        "diff": "Diferencia",
+        "total": "Total"
+      }
+    },
+    "calendar": {
+      "note": "Tu Google Calendar, incrustado. Si lo ves vacío, comprueba que tienes sesión iniciada en Google en este navegador.",
+      "manageCalendars": "Gestionar calendarios",
+      "howToFindId": "Por defecto solo se muestra tu calendario principal. Para añadir otro (secundario o compartido): abre Google Calendar → Configuración → elige el calendario → Integrar calendario → copia su ID de calendario y pégalo abajo.",
+      "idPlaceholder": "ID de calendario (ej. abc123@group.calendar.google.com)",
+      "addCalendar": "Añadir",
+      "primary": "Principal"
+    },
+    "brain": {
+      "connected": "Telegram conectado (Chat ID {{chatId}})",
+      "disconnect": "Desconectar",
+      "howToConnect": "Envía un mensaje a tu bot en Telegram — te responderá con tu Chat ID.",
+      "pasteChatId": "Pega ese Chat ID abajo para conectarlo a tu cuenta.",
+      "chatIdPlaceholder": "Chat ID",
+      "connect": "Conectar",
+      "notePlaceholder": "Anota algo...",
+      "addNote": "Añadir",
+      "empty": "Aquí aparecerán las ideas que captures desde Telegram."
+    },
+    "diario": {
+      "checkin": {
+        "title": "¿Qué tal ayer?",
+        "subtitle": "Un check-in diario rápido — menos de un minuto.",
+        "moodLabel": "¿Cómo te sientes hoy?",
+        "bestLabel": "Lo mejor de ayer",
+        "improveLabel": "¿Qué mejorarías de ayer?",
+        "ratingLabel": "Valora el día de ayer",
+        "save": "Guardar",
+        "skip": "Saltar por hoy"
+      },
+      "entries": {
+        "empty": "Aquí se irán acumulando las entradas de tu diario.",
+        "yesterdayRating": "Ayer valorado con {{rating}}/5"
       }
     }
+  },
+  "cookies": {
+    "message": "Uso Google Analytics (cookies) para entender cómo se usa la web y mejorarla. Solo se activa si lo aceptas.",
+    "accept": "Aceptar",
+    "decline": "Rechazar"
+  }
 }

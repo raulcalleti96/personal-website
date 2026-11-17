@@ -36,10 +36,10 @@ function ProgressIndicator() {
           to={section}
           smooth={true}
           duration={500}
-          className={`w-4 h-4 rounded-full cursor-pointer transition-colors duration-300 ${
+          className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-colors duration-300 ${
             activeSection === section
-              ? "bg-naranja-vibrante"
-              : "bg-gris-medio"
+              ? "bg-tinta"
+              : "bg-tinta/20"
           }`}
         />
       ))}

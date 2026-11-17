@@ -5,6 +5,7 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n"; // Importar la configuración de idiomas
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import CookieBanner from "./components/CookieBanner";
 import ScrollProgressBar from "./components/ScrollProgressBar";
 import ProgressIndicator from "./components/ProgressIndicator";
 import Home from "./sections/Home";
@@ -13,8 +14,11 @@ import Projects from "./sections/Projects";
 import Articles from "./sections/Articles";
 import Contact from "./sections/Contact";
 import Empire from "./sections/Empire";
+import Radio from "./radio/Radio";
 import ProtectedRoute from "./portal/ProtectedRoute";
 import PortalLayout from "./portal/PortalLayout";
+import AppSelect from "./portal/pages/AppSelect";
+import Focus from "./portal/pages/Focus";
 import PortalHome from "./portal/pages/Home";
 import Tasks from "./portal/pages/Tasks";
 import Habits from "./portal/pages/Habits";
@@ -105,11 +109,16 @@ function App() {
                   <Navbar />
                   <MainPage />
                   <Footer />
+                  <CookieBanner />
                 </>
               }
             />
+            <Route path="/radio" element={<Radio />} />
+            <Route path="/navidudu" element={<Radio />} />
             <Route path="/clients" element={<Empire />} />
             <Route element={<ProtectedRoute />}>
+              <Route path="/clients/select" element={<AppSelect />} />
+              <Route path="/clients/focus" element={<Focus />} />
               <Route element={<PortalLayout />}>
                 <Route path="/clients/home" element={<PortalHome />} />
                 <Route path="/clients/tasks" element={<Tasks />} />

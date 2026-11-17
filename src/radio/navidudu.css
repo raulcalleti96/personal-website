@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600;1,9..144,900&family=Caveat:wght@500;600&display=swap");
+
+.navidudu {
+  --nv-night: #0a1f1b;
+  --nv-spruce: #164236;
+  --nv-cranberry: #c1272d;
+  --nv-gold: #f0c869;
+  --nv-snow: #f7f3e9;
+  --nv-paper: #f3ead7;
+  --nv-ink: #2a1c14;
+  color: var(--nv-snow);
+  background:
+    radial-gradient(ellipse 80% 55% at 50% -8%, rgba(240, 200, 105, 0.16), transparent 60%),
+    radial-gradient(ellipse 90% 22% at 50% 100%, rgba(31, 96, 77, 0.55), transparent 75%),
+    radial-gradient(ellipse 120% 70% at 50% 0%, var(--nv-spruce) 0%, var(--nv-night) 62%, #061411 100%);
+  background-color: var(--nv-night);
+}
+
+.navidudu .nv-display {
+  font-family: "Fraunces", Georgia, serif;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+}
+
+.navidudu .nv-hand {
+  font-family: "Caveat", "Segoe Script", cursive;
+}
+
+.nv-bulb {
+  position: absolute;
+  width: 11px;
+  height: 15px;
+  margin-left: -5px;
+  border-radius: 50% 50% 55% 55%;
+  background: var(--bulb);
+  box-shadow: 0 0 14px 4px var(--bulb);
+  animation: nv-twinkle 2.4s ease-in-out infinite;
+}
+
+.nv-bulb::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: -4px;
+  width: 7px;
+  height: 5px;
+  border-radius: 1px;
+  background: #050f0d;
+}
+
+@keyframes nv-twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+@keyframes nv-spin {
+  to { transform: rotate(360deg); }
+}
+
+.nv-record {
+  background:
+    radial-gradient(circle, transparent 0 18%, rgba(255, 255, 255, 0.05) 18.5% 19%, transparent 19.5%),
+    repeating-radial-gradient(circle at center, #0b0b0b 0 2px, #1a1a1a 2px 3px);
+  animation: nv-spin 3.2s linear infinite;
+  animation-play-state: paused;
+}
+
+.nv-record.is-playing {
+  animation-play-state: running;
+}
+
+.nv-paper {
+  background:
+    repeating-linear-gradient(to bottom, transparent 0 2.3rem, rgba(120, 90, 60, 0.18) 2.3rem calc(2.3rem + 1px)),
+    var(--nv-paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nv-bulb, .nv-record { animation: none; }
+}

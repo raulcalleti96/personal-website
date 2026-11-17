@@ -1,35 +1,49 @@
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { FiGlobe } from "react-icons/fi";
-import { Link } from "react-router-dom";
-// ... tus imports se mantienen igual
+import HeroScene from "../components/editorial/HeroScene";
+import NowWidget from "../components/editorial/NowWidget";
+import henKaznelsonNyc from "../assets/hen-kaznelson-nyc.jpg";
+import maevaVigierNyc from "../assets/maeva-vigier-nyc.jpg";
+
+const MONTH_ABBR = {
+  en: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+  es: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+};
 
 const Home = () => {
-  const orbitRef = useRef();
   const { t, i18n } = useTranslation();
   const [currentMessage, setCurrentMessage] = useState("");
   const [showMessage, setShowMessage] = useState(false);
-  const [showLanguageButton, setShowLanguageButton] = useState(true);
 
-  const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === "en" ? "es" : "en");
+  const now = new Date();
+  const monthAbbr = MONTH_ABBR[i18n.language === "es" ? "es" : "en"][now.getMonth()];
+  const nowDateLabel = `${t("home.now.label")} · ${monthAbbr} '${String(now.getFullYear()).slice(-2)}`;
+  const nowItems = [
+    { label: t("home.now.building.label"), title: t("home.now.building.title"), subtitle: t("home.now.building.subtitle") },
+    { label: t("home.now.reading.label"), title: t("home.now.reading.title"), subtitle: t("home.now.reading.subtitle") },
+    { label: t("home.now.listening.label"), title: t("home.now.listening.title"), subtitle: t("home.now.listening.subtitle") },
+    { label: t("home.now.watching.label"), title: t("home.now.watching.title"), subtitle: t("home.now.watching.subtitle") },
+  ];
+
+  const heroIntro = {
+    role: t("home.hero.role"),
+    name: t("home.hero.name"),
+    tagline: t("home.hero.tagline"),
+    cta: t("home.hero.cta"),
+    scroll: t("home.scroll"),
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const aboutSection = document.getElementById("about");
-      if (aboutSection) {
-        const aboutPosition = aboutSection.offsetTop - 100;
-        setShowLanguageButton(window.scrollY < aboutPosition);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const heroProof = {
+    label: t("home.proof.label"),
+    stats: [
+      { value: t("home.proof.stats.years.value"), label: t("home.proof.stats.years.label") },
+      { value: t("home.proof.stats.projects.value"), label: t("home.proof.stats.projects.label") },
+      { value: t("home.proof.stats.location.value"), label: t("home.proof.stats.location.label") },
+    ],
+    blurb: t("home.proof.blurb"),
+    cta: t("home.proof.cta"),
+  };
 
   useEffect(() => {
     const getMessages = () => {
@@ -65,100 +79,41 @@ const Home = () => {
         generalGreeting = t("home.greeting.evening");
       }
 
-      if (special) {
-        setCurrentMessage(special);
-        setShowMessage(true);
-        setTimeout(() => {
-          setShowMessage(false);
-          setTimeout(() => {
-            setCurrentMessage(generalGreeting);
-            setShowMessage(true);
-            setTimeout(() => {
-              setShowMessage(false);
-            }, 4000);
-          }, 1000);
-        }, 4000);
-      } else {
-        setCurrentMessage(generalGreeting);
-        setShowMessage(true);
-        setTimeout(() => {
-          setShowMessage(false);
-        }, 4000);
-      }
+      const message = special || generalGreeting;
+      setCurrentMessage(message);
+      setShowMessage(true);
+      const hideAfter = special ? 4000 : 5000;
+      const timer = setTimeout(() => setShowMessage(false), hideAfter);
+      return () => clearTimeout(timer);
     };
 
     getMessages();
   }, [t]);
 
-  const buttonClass =
-    "px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold rounded-lg shadow-lg transition";
-
   return (
-    <div
-      className="relative w-full h-screen overflow-y-auto font-[Poppins]"
-      style={{
-        backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/personal-website-89a20.firebasestorage.app/o/images%2Fmaeva-vigier-nyc.jpg?alt=media&token=3297e4fc-b0f5-48e7-9b06-1cd37e4627a9")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <Canvas className="absolute inset-0 z-0" style={{ pointerEvents: "none" }}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[3, 3, 3]} intensity={1} />
-        <OrbitControls ref={orbitRef} enableZoom={false} enableRotate={false} enablePan={false} />
-      </Canvas>
+    <div className="relative w-full bg-crema">
+      <HeroScene
+        photos={[henKaznelsonNyc, maevaVigierNyc]}
+        intro={heroIntro}
+        proof={heroProof}
+        badge={
+          <AnimatePresence>
+            {showMessage && currentMessage && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="bg-crema text-tinta px-5 py-2.5 rounded-full shadow-lg text-sm"
+              >
+                {currentMessage}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        }
+      />
 
-      {showLanguageButton && (
-        <motion.button
-          onClick={toggleLanguage}
-          className="absolute top-12 left-6 bg-neutral-700/80 text-white rounded-full px-6 py-3 shadow-lg flex items-center justify-center w-[100px] h-[50px] hover:bg-neutral-600/80 transition duration-300 z-20"
-        >
-          <FiGlobe className="mr-2" />
-          {i18n.language === "en" ? "EN" : "ES"}
-        </motion.button>
-      )}
-
-      {showMessage && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="absolute top-5 right-6 bg-neutral-700/80 text-white px-6 py-3 rounded-full shadow-lg z-20 text-sm sm:text-base"
-        >
-          {currentMessage}
-        </motion.div>
-      )}
-
-      <div className="absolute top-[24%] sm:top-[25%] md:top-[28%] lg:top-[25%] xl:top-[25%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center">
-        <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"
-          style={{ color: "#1B3B6F", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)" }}
-        >
-          {t("home.title")}
-        </motion.h1>
-        <motion.p className="text-base sm:text-lg md:text-xl text-black mt-4">
-          {t("home.subtitle")}
-        </motion.p>
-
-        <div className="mt-6 overflow-x-auto w-full max-w-[90vw] mx-auto">
-          <div className="flex gap-3 sm:justify-center w-max px-2">
-            <motion.a href="#cv" className={`${buttonClass} bg-[#E68A00] text-black`}>
-              {t("home.buttons.cv")}
-            </motion.a>
-            <motion.a href="#blog" className={`${buttonClass} bg-gris-medio text-blanco-suave`}>
-              {t("home.buttons.blog")}
-            </motion.a>
-            <motion.a href="#projects" className={`${buttonClass} bg-gris-medio text-blanco-suave`}>
-              {t("home.buttons.projects")}
-            </motion.a>
-            <motion.a href="#contact" className={`${buttonClass} bg-gris-medio text-blanco-suave`}>
-              {t("home.buttons.contact")}
-            </motion.a>
-            <Link to="/clients" className={`${buttonClass} bg-amber-500 text-black hover:bg-amber-400`}>
-              Empire
-            </Link>
-          </div>
-        </div>
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 py-20 sm:py-24">
+        <NowWidget dateLabel={nowDateLabel} items={nowItems} />
       </div>
     </div>
   );

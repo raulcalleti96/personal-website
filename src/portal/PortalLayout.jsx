@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useNavigate, useOutletContext } from "react-router-dom";
+import { Link, NavLink, Outlet, useNavigate, useOutletContext } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   FiHome,
@@ -9,6 +9,7 @@ import {
   FiRepeat,
   FiDollarSign,
   FiCalendar,
+  FiGrid,
 } from "react-icons/fi";
 import { FaBrain } from "react-icons/fa";
 import { supabase } from "../supabaseClient";
@@ -78,6 +79,13 @@ const PortalLayout = () => {
         </nav>
 
         <div className="space-y-2 pt-4 border-t border-white/10">
+          <Link
+            to="/clients/select"
+            className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-blanco-suave hover:bg-neutral-700/60 transition"
+          >
+            <FiGrid />
+            {t("portal.nav.switchApp")}
+          </Link>
           <button
             onClick={toggleLanguage}
             className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-blanco-suave hover:bg-neutral-700/60 transition"
