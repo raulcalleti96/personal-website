@@ -16,7 +16,7 @@ export const TRACKS = [
   { title: "Oh là là, Dudu", file: "04-oh-la-la-dudu.mp3" },
   { title: "Mio, Mio", file: "05-mio-mio.mp3" },
   { title: "Ah, Jesús", file: "06-ah-jesus.mp3" },
-  { title: "¡otra Guinness, que es Navidad!", file: "07-otra-guinness.mp3" },
+  { title: "¡Otra Guinness, que es Navidad!", file: "07-otra-guinness.mp3" },
   { title: "Another Christmas…", file: "08-another-christmas.mp3" },
   { title: "Edu, ¿Cuándo vienes?", file: "09-edu-cuando-vienes.mp3" },
 ];
