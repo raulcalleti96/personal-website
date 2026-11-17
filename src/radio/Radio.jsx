@@ -69,14 +69,35 @@ export default function Radio() {
   }, []);
   const fullAccess = canListenToAll(session);
 
+  // Tracks 2+ live in a private Supabase bucket; only allowed accounts get
+  // signed links. Without a link a track stays locked.
+  const [signed, setSigned] = useState({});
+  useEffect(() => {
+    if (!fullAccess) {
+      setSigned({});
+      return undefined;
+    }
+    let cancelled = false;
+    const files = TRACKS.filter((t, i) => i > 0 && t.file).map((t) => t.file);
+    supabase.storage
+      .from("radio")
+      .createSignedUrls(files, 60 * 60 * 12)
+      .then(({ data, error }) => {
+        if (cancelled || error || !data) return;
+        setSigned(Object.fromEntries(data.filter((d) => d.signedUrl).map((d) => [d.path, d.signedUrl])));
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [fullAccess]);
+
   const tracks = useMemo(
     () =>
-      TRACKS.map((t, i) => ({
-        ...t,
-        locked: Boolean(t.file) && i > 0 && !fullAccess,
-        src: t.file && (i === 0 || fullAccess) ? `/radio/${t.file}` : null,
-      })),
-    [fullAccess]
+      TRACKS.map((t, i) => {
+        const src = !t.file ? null : i === 0 ? `/radio/${t.file}` : signed[t.file] || null;
+        return { ...t, src, locked: Boolean(t.file) && !src };
+      }),
+    [signed]
   );
   const playable = useMemo(() => tracks.filter((t) => t.src), [tracks]);
   const player = useRadioPlayer(playable, { artist: ALBUM.title, album: ALBUM.title });

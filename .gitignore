@@ -131,3 +131,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Private album audio (lives in Supabase Storage, bucket "radio")
+private-audio/
