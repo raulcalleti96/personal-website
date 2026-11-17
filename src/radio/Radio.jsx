@@ -1,10 +1,12 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { FiArrowLeft, FiPlay, FiPause, FiSkipBack, FiSkipForward, FiVolume2 } from "react-icons/fi";
+import { FiArrowLeft, FiPlay, FiPause, FiSkipBack, FiSkipForward, FiVolume2, FiLock } from "react-icons/fi";
 import Garland from "./Garland";
 import Snow from "./Snow";
 import { ALBUM, TRACKS } from "./playlist";
 import { useRadioPlayer } from "./useRadioPlayer";
+import { supabase } from "../supabaseClient";
+import { canListenToAll } from "../portal/lib/access";
 import "./navidudu.css";
 
 const fmt = (s) => {
@@ -58,7 +60,24 @@ function Pines() {
 
 export default function Radio() {
   // Only songs with an audio file are playable; the rest stay in the tracklist.
-  const tracks = useMemo(() => TRACKS.map((t) => ({ ...t, src: t.file ? `/radio/${t.file}` : null })), []);
+  // Until we know who is listening, only the first song is unlocked.
+  const [session, setSession] = useState(null);
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => setSession(data.session));
+    const { data: sub } = supabase.auth.onAuthStateChange((_event, next) => setSession(next));
+    return () => sub.subscription.unsubscribe();
+  }, []);
+  const fullAccess = canListenToAll(session);
+
+  const tracks = useMemo(
+    () =>
+      TRACKS.map((t, i) => ({
+        ...t,
+        locked: Boolean(t.file) && i > 0 && !fullAccess,
+        src: t.file && (i === 0 || fullAccess) ? `/radio/${t.file}` : null,
+      })),
+    [fullAccess]
+  );
   const playable = useMemo(() => tracks.filter((t) => t.src), [tracks]);
   const player = useRadioPlayer(playable, { artist: ALBUM.title, album: ALBUM.title });
   const { index, playing, time, durations, volume } = player;
@@ -228,7 +247,7 @@ export default function Radio() {
                           {active && <Equalizer active={playing} />}
                         </span>
                         <span className="font-mono tabular-nums text-sm text-[var(--nv-snow)]/45 shrink-0 text-right">
-                          {track.src ? fmt(length) : hasAudio ? "Próximamente" : ""}
+                          {track.src ? fmt(length) : track.locked ? <FiLock className="inline" aria-label="Bloqueada" /> : hasAudio ? "Próximamente" : ""}
                         </span>
                       </button>
                     </li>

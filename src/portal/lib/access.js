@@ -11,3 +11,7 @@ export const isRadioOnly = (session) => {
   const email = session?.user?.email?.toLowerCase();
   return Boolean(email) && RADIO_ONLY.includes(email);
 };
+
+// Only the first track is public/for radio-only accounts; the full album needs a
+// signed-in account that is not radio-only.
+export const canListenToAll = (session) => Boolean(session) && !isRadioOnly(session);
