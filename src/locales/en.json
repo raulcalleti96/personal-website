@@ -579,7 +579,8 @@
       "brain": "Brain",
       "diario": "Journal",
       "logout": "Log out",
-      "switchApp": "Switch app"
+      "switchApp": "Switch app",
+      "apps": "Apps"
     },
     "select": {
       "greeting": "Welcome back, {{name}}",
@@ -595,6 +596,10 @@
       "radio": {
         "title": "Empire-Radio",
         "description": "The Christmas album Feliz Navidudu: nine songs and a letter."
+      },
+      "test": {
+        "title": "Empire Test",
+        "description": "Daily review and practice tests for the PDE exam and basketball refereeing."
       }
     },
     "focus": {

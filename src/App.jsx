@@ -1,4 +1,5 @@
 //import { useState, useEffect } from "react";
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { I18nextProvider } from "react-i18next";
@@ -19,6 +20,7 @@ import ProtectedRoute from "./portal/ProtectedRoute";
 import PortalLayout from "./portal/PortalLayout";
 import AppSelect from "./portal/pages/AppSelect";
 import Focus from "./portal/pages/Focus";
+const EmpireTest = lazy(() => import("./portal/pages/EmpireTest"));
 import PortalHome from "./portal/pages/Home";
 import Tasks from "./portal/pages/Tasks";
 import Habits from "./portal/pages/Habits";
@@ -119,6 +121,14 @@ function App() {
             <Route element={<ProtectedRoute />}>
               <Route path="/clients/select" element={<AppSelect />} />
               <Route path="/clients/focus" element={<Focus />} />
+              <Route
+                path="/clients/test"
+                element={
+                  <Suspense fallback={null}>
+                    <EmpireTest />
+                  </Suspense>
+                }
+              />
               <Route element={<PortalLayout />}>
                 <Route path="/clients/home" element={<PortalHome />} />
                 <Route path="/clients/tasks" element={<Tasks />} />

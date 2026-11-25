@@ -134,3 +134,7 @@ dist
 
 # Private album audio (lives in Supabase Storage, bucket "radio")
 private-audio/
+
+# Private exam-review page for Empire Test (kept out of the public repo)
+src/portal/test/
+.DS_Store

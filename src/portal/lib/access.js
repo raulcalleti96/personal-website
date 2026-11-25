@@ -15,3 +15,14 @@ export const isRadioOnly = (session) => {
 // Only the first track is public/for radio-only accounts; the full album needs a
 // signed-in account that is not radio-only.
 export const canListenToAll = (session) => Boolean(session) && !isRadioOnly(session);
+
+// "Empire Test" (exam review) is only for the accounts in VITE_EMPIRE_TEST_EMAILS.
+const TEST_EMAILS = (import.meta.env.VITE_EMPIRE_TEST_EMAILS || "")
+  .split(",")
+  .map((e) => e.trim().toLowerCase())
+  .filter(Boolean);
+
+export const canSeeTest = (session) => {
+  const email = session?.user?.email?.toLowerCase();
+  return Boolean(email) && TEST_EMAILS.includes(email);
+};

@@ -1,8 +1,8 @@
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FiGrid, FiClock, FiRadio, FiLogOut } from "react-icons/fi";
+import { FiGrid, FiClock, FiRadio, FiBookOpen, FiLogOut } from "react-icons/fi";
 import { supabase } from "../../supabaseClient";
-import { isRadioOnly } from "../lib/access";
+import { isRadioOnly, canSeeTest } from "../lib/access";
 import empireVideo from "../../assets/Empire.mp4";
 
 const AppSelect = () => {
@@ -37,8 +37,17 @@ const AppSelect = () => {
       title: t("portal.select.radio.title"),
       description: t("portal.select.radio.description"),
     },
+    {
+      key: "test",
+      to: "/clients/test",
+      icon: FiBookOpen,
+      title: t("portal.select.test.title"),
+      description: t("portal.select.test.description"),
+    },
   ];
-  const apps = isRadioOnly(session) ? allApps.filter((app) => app.key === "radio") : allApps;
+  const apps = isRadioOnly(session)
+    ? allApps.filter((app) => app.key === "radio")
+    : allApps.filter((app) => app.key !== "test" || canSeeTest(session));
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
@@ -68,7 +77,9 @@ const AppSelect = () => {
           {t("portal.select.title")}
         </h1>
 
-        <div className={`grid gap-6 ${apps.length > 1 ? "sm:grid-cols-3" : "max-w-sm mx-auto"}`}>
+        <div className={`grid gap-6 ${
+          apps.length > 3 ? "sm:grid-cols-2 lg:grid-cols-4" : apps.length > 1 ? "sm:grid-cols-3" : "max-w-sm mx-auto"
+        }`}>
           {apps.map((app) => (
             <button
               key={app.key}

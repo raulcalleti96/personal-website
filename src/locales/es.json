@@ -579,7 +579,8 @@
       "brain": "Brain",
       "diario": "Diario",
       "logout": "Cerrar sesión",
-      "switchApp": "Cambiar de app"
+      "switchApp": "Cambiar de app",
+      "apps": "Aplicaciones"
     },
     "select": {
       "greeting": "Bienvenido de nuevo, {{name}}",
@@ -595,6 +596,10 @@
       "radio": {
         "title": "Empire-Radio",
         "description": "El disco de Navidad Feliz Navidudu: nueve canciones y una carta."
+      },
+      "test": {
+        "title": "Empire Test",
+        "description": "Repaso diario y tests de práctica para el examen PDE y el baloncesto."
       }
     },
     "focus": {
