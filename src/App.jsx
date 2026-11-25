@@ -1,6 +1,6 @@
 //import { useState, useEffect } from "react";
 import { lazy, Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n"; // Importar la configuración de idiomas
@@ -115,12 +115,14 @@ function App() {
                 </>
               }
             />
-            <Route path="/radio" element={<Radio />} />
-            <Route path="/navidudu" element={<Radio />} />
+            {/* The album page lives inside Empire; the old public URLs only lead to the login. */}
+            <Route path="/radio" element={<Navigate to="/clients/radio" replace />} />
+            <Route path="/navidudu" element={<Navigate to="/clients/radio" replace />} />
             <Route path="/clients" element={<Empire />} />
             <Route element={<ProtectedRoute />}>
               <Route path="/clients/select" element={<AppSelect />} />
               <Route path="/clients/focus" element={<Focus />} />
+              <Route path="/clients/radio" element={<Radio />} />
               <Route
                 path="/clients/test"
                 element={

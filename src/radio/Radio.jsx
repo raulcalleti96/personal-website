@@ -123,10 +123,10 @@ export default function Radio() {
       <div className="relative z-20">
         <header className="px-6 sm:px-10 pt-28 pb-2">
           <Link
-            to="/"
+            to="/clients/select"
             className="inline-flex items-center gap-3 text-[var(--nv-snow)]/70 hover:text-[var(--nv-snow)] transition-colors text-xs uppercase tracking-[0.15em] font-semibold"
           >
-            <FiArrowLeft /> RS.
+            <FiArrowLeft /> Empire
           </Link>
         </header>
 

@@ -52,12 +52,6 @@ function Navbar() {
               {link.label}
             </a>
           ))}
-          <Link
-            to="/radio"
-            className="whitespace-nowrap text-xs uppercase tracking-[0.15em] font-semibold text-tinta/70 hover:text-tinta transition-colors"
-          >
-            {t("nav.radio")}
-          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -110,13 +104,6 @@ function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <Link
-                to="/radio"
-                onClick={() => setIsMenuOpen(false)}
-                className="text-4xl font-display font-bold text-tinta"
-              >
-                {t("nav.radio")}
-              </Link>
               <Link
                 to="/clients"
                 onClick={() => setIsMenuOpen(false)}

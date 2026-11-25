@@ -32,7 +32,7 @@ const AppSelect = () => {
     },
     {
       key: "radio",
-      to: "/radio",
+      to: "/clients/radio",
       icon: FiRadio,
       title: t("portal.select.radio.title"),
       description: t("portal.select.radio.description"),

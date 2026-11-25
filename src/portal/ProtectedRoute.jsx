@@ -31,8 +31,8 @@ const ProtectedRoute = () => {
     return <Navigate to="/clients" replace />;
   }
 
-  // Radio-only accounts can reach the selector and nothing else in the portal.
-  if (isRadioOnly(session) && pathname !== "/clients/select") {
+  // Radio-only accounts can reach the selector and the radio, nothing else in the portal.
+  if (isRadioOnly(session) && pathname !== "/clients/select" && pathname !== "/clients/radio") {
     return <Navigate to="/clients/select" replace />;
   }
 
